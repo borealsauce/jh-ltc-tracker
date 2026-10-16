@@ -1,0 +1,75 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>JH LTC Tracker</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0a0a0a;--card:#141414;--line:#262626;--gold:#d4af37;--txt:#e5e5e5;--muted:#a3a3a3;--red:#ef4444;--green:#22c55e;--yel:#facc15}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:14px Inter,system-ui,sans-serif}
+h1,h2{font-family:Oswald,sans-serif;letter-spacing:.05em;color:var(--gold);margin:0}h2{font-size:19px;margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px 40px}.top{border-bottom:1px solid var(--line);padding:18px 0;margin-bottom:16px;background:#0f0f0f}
+.muted{color:var(--muted);font-size:12px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;transition:.2s}.card:hover{border-color:var(--gold);box-shadow:0 0 18px rgba(212,175,55,.18)}
+.card .l{font:700 11px Inter;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}.card .v{font:700 24px Oswald;margin-top:4px}.card .s{font-size:12px;color:var(--muted)}
+.big .v{font-size:40px}.big{border-color:var(--gold)}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line)}th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{background:#1c1c1c;color:var(--gold);cursor:pointer;user-select:none}td:first-child,th:first-child{text-align:left}td.t,th.t{text-align:left}
+.neg{color:var(--red)}.pos{color:var(--green)}.scroll{overflow-x:auto}tr.y td{background:rgba(250,204,21,.12)}tr.r td{background:rgba(239,68,68,.13)}
+.sub td{background:#1f1a0c;color:var(--gold);font-weight:700;text-align:left}.tag{padding:2px 8px;border-radius:99px;font-size:11px;font-weight:700}.tag.y{background:var(--yel);color:#000}.tag.r{background:var(--red);color:#fff}.tag.g{background:#333}.tag.jh{background:var(--gold);color:#000}
+section{background:#0f0f0f;border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}.h{cursor:grab;color:var(--muted);font-size:18px}section.drag{opacity:.4}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.pill{border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:99px;padding:7px 16px;font:600 13px Inter;cursor:pointer}.pill.on{background:var(--gold);color:#000;border-color:var(--gold)}
+.chart{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;height:300px;margin-bottom:12px}button.rst{float:right;background:none;border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:6px 12px;cursor:pointer}
+</style></head><body>
+<div class="top"><div class="wrap" style="padding-bottom:0"><button class="rst" onclick="localStorage.removeItem('jhorder');location.reload()">Reset layout</button><h1>JH LTC TRACKER</h1><div class="muted" id="meta"></div>
+<div class="pills" id="pills"></div></div></div>
+<div class="wrap" id="secs"></div>
+<script>
+const $=s=>document.querySelector(s),f=n=>(n<0?'−':'')+'$'+Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}),
+cl=n=>n<0?'neg':n>0?'pos':'',sg=n=>`<span class="${cl(n)}">${f(n)}</span>`;let D,YR='All',ch;
+const tierTag=t=>t=='30+ overdue'?'<span class="tag r">30+ overdue</span>':t=='2 wks overdue'?'<span class="tag y">2 wks overdue</span>':'<span class="tag g">within 14 days</span>';
+const inY=d=>YR=='All'||d.startsWith(YR);const S=a=>a.reduce((s,x)=>s+x.amount,0);
+function tbl(id,cols,rows,rowcls){return `<div class="scroll"><table id="${id}"><thead><tr>${cols.map((c,i)=>`<th class="${c[2]||''}" data-i="${i}">${c[0]}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>r.sub?`<tr class="sub"><td colspan="${cols.length}">${r.sub}</td></tr>`:`<tr class="${rowcls?rowcls(r):''}">${cols.map(c=>`<td class="${c[2]||''}" data-v="${typeof c[1](r,1)=='number'?c[1](r,1):String(c[1](r,1)).replace(/"/g,'')}">${c[1](r)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
+function render(){
+ const um=D.unmatched.filter(p=>inY(p.date)),mt=D.matched.filter(p=>inY(p.date)),ins=D.ins.filter(i=>inY(i.date)),jh=ins.filter(i=>i.jh),pays=um.concat(mt);
+ const T=t=>um.filter(p=>p.tier==t),jhT=S(jh),care=S(pays),owed=S(um);
+ const sec={};
+ sec.owed=`<h2><span class="h">≡</span>STILL OWED BY JH</h2><div class="cards">
+  <div class="card big"><div class="l">Still owed by JH</div><div class="v neg">${f(owed)}</div><div class="s">${um.length} care payments with no matching JH deposit</div></div>
+  <div class="card"><div class="l">Within 14 days</div><div class="v">${f(S(T('within 14 days')))}</div><div class="s">${T('within 14 days').length} payments · not overdue yet</div></div>
+  <div class="card" style="border-color:var(--yel)"><div class="l">2 wks overdue (14–29d)</div><div class="v neg">${f(S(T('2 wks overdue')))}</div><div class="s">${T('2 wks overdue').length} payments</div></div>
+  <div class="card" style="border-color:var(--red)"><div class="l">30+ days overdue</div><div class="v neg">${f(S(T('30+ overdue')))}</div><div class="s">${T('30+ overdue').length} payments</div></div></div>
+  <div class="cards" style="margin-top:12px">${[...new Set(um.map(p=>p.vendor))].map(v=>{const a=um.filter(p=>p.vendor==v);return `<div class="card"><div class="l">${v}</div><div class="v neg">${f(S(a))}</div><div class="s">${a.length} unpaid · <span style="color:var(--yel)">${f(S(a.filter(p=>p.tier=='2 wks overdue')))}</span> 2wk · <span class="neg">${f(S(a.filter(p=>p.tier=='30+ overdue')))}</span> 30+</div></div>`}).join('')}</div>`;
+ sec.sum=`<h2><span class="h">≡</span>SUMMARY</h2><div class="cards">
+  <div class="card"><div class="l">JH received</div><div class="v pos">${f(jhT)}</div><div class="s">${jh.length} deposits</div></div>
+  <div class="card"><div class="l">Care expenses</div><div class="v neg">${f(-care)}</div><div class="s">${pays.length} payments (Synovus + Citi)</div></div>
+  <div class="card"><div class="l">Net gap / shortage</div><div class="v">${sg(jhT-care)}</div><div class="s">JH received − care paid</div></div>
+  <div class="card"><div class="l">Matched to JH</div><div class="v pos">${f(S(mt))}</div><div class="s">${mt.length} payments</div></div>
+  <div class="card"><div class="l">JH deposits not matched</div><div class="v">${f(S(jh.filter(j=>!j.matched)))}</div><div class="s">JH paid amounts that don't equal one payment (partial / combined)</div></div></div>`;
+ const bm=D.by_month.filter(b=>inY(b.month));
+ sec.month=`<h2><span class="h">≡</span>BY MONTH</h2><div class="chart"><canvas id="cm"></canvas></div>`+tbl('tm',[['Month',r=>r.month,'t'],['JH received',(r,v)=>v?r.jh:sg(r.jh)],['Care paid',(r,v)=>v?-r.care:sg(-r.care)],['Net',(r,v)=>v?r.net:sg(r.net)]],bm);
+ const vs=[...new Set(pays.map(p=>p.vendor))].map(v=>{const a=pays.filter(p=>p.vendor==v),r=mt.filter(p=>p.vendor==v),o=um.filter(p=>p.vendor==v);return{v,n:a.length,paid:S(a),re:S(r),ow:S(o)}});
+ sec.vendor=`<h2><span class="h">≡</span>BY VENDOR</h2>`+tbl('tv',[['Vendor',r=>r.v,'t'],['Payments',r=>r.n],['Paid',(r,v)=>v?-r.paid:sg(-r.paid)],['Reimbursed (matched)',(r,v)=>v?r.re:sg(r.re)],['Gap / still owed',(r,v)=>v?-r.ow:sg(-r.ow)]],vs);
+ const g=[];[...new Set(um.map(p=>p.vendor))].sort().forEach(v=>{const a=um.filter(p=>p.vendor==v).sort((x,y)=>y.date.localeCompare(x.date));g.push({sub:`${v} — ${f(S(a))} (${a.length})`},...a)});
+ sec.chase=`<h2><span class="h">≡</span>UNMATCHED PAYMENTS — CHASE LIST</h2><div class="muted" style="margin-bottom:8px">JH expected within 2 weeks. Yellow = 2 wks overdue (14–29 days) · Red = 30+ days overdue. Match rule: same amount ±$0.10, JH posted 7 days before to 35 days after.</div>`+tbl('tc',[['Date',r=>r.date,'t'],['Vendor',r=>r.vendor,'t'],['Source',r=>r.src,'t'],['Amount',(r,v)=>v?-r.amount:sg(-r.amount)],['Days unpaid',r=>r.days],['Status',(r,v)=>v?r.tier:tierTag(r.tier),'t']],g,r=>r.tier=='30+ overdue'?'r':r.tier=='2 wks overdue'?'y':'');
+ const bs={};ins.forEach(i=>{bs[i.source]=bs[i.source]||{s:i.source,n:0,a:0};bs[i.source].n++;bs[i.source].a+=i.amount});
+ sec.ins=`<h2><span class="h">≡</span>PAYMENTS IN (ALL SYNOVUS DEPOSITS)</h2><div class="pills" id="inf"><button class="pill on" data-f="all">All</button><button class="pill" data-f="jh">John Hancock only</button><button class="pill" data-f="other">Other</button></div>`+
+  tbl('tbs',[['Source',r=>r.s,'t'],['Count',r=>r.n],['Total',(r,v)=>v?r.a:sg(r.a)]],Object.values(bs).sort((a,b)=>b.a-a.a))+'<div style="height:12px"></div>'+
+  tbl('ti',[['Date',r=>r.date,'t'],['Source',(r,v)=>v?r.source:(r.jh?'<span class="tag jh">JH</span> ':'')+r.source,'t'],['Amount',(r,v)=>v?r.amount:sg(r.amount)],['Matched to',r=>r.jh?(r.matched||'— not matched'):'','t']],ins,r=>r.jh?'jh':'oth');
+ const g2=[];[...new Set(mt.map(p=>p.vendor))].sort().forEach(v=>{const a=mt.filter(p=>p.vendor==v).sort((x,y)=>y.date.localeCompare(x.date));g2.push({sub:`${v} — ${f(S(a))} (${a.length})`},...a)});
+ sec.matched=`<h2><span class="h">≡</span>MATCHED PAYMENTS (REIMBURSED)</h2>`+tbl('tmt',[['Date',r=>r.date,'t'],['Vendor',r=>r.vendor,'t'],['Source',r=>r.src,'t'],['Amount',(r,v)=>v?-r.amount:sg(-r.amount)],['JH deposit',r=>r.match,'t'],['Days to JH',r=>r.lag]],g2);
+ const def=['owed','sum','month','vendor','chase','ins','matched'];let ord=JSON.parse(localStorage.getItem('jhorder')||'null');if(!ord||ord.length!=def.length)ord=def;
+ $('#secs').innerHTML=ord.map(k=>`<section draggable="false" data-k="${k}">${sec[k]}</section>`).join('');
+ if(window.Chart){ch&&ch.destroy();ch=new Chart($('#cm'),{type:'bar',data:{labels:bm.map(b=>b.month),datasets:[{label:'JH received',data:bm.map(b=>b.jh),backgroundColor:'#22c55e'},{label:'Care paid',data:bm.map(b=>b.care),backgroundColor:'#ef4444'},{type:'line',label:'Net',data:bm.map(b=>b.net),borderColor:'#d4af37',backgroundColor:'#d4af37'}]},options:{maintainAspectRatio:false,plugins:{legend:{labels:{color:'#e5e5e5'}}},scales:{x:{ticks:{color:'#a3a3a3'},grid:{color:'#262626'}},y:{ticks:{color:'#a3a3a3'},grid:{color:'#262626'}}}}})}
+ wire()}
+function wire(){
+ document.querySelectorAll('th').forEach(th=>th.onclick=()=>{const t=th.closest('table'),i=+th.dataset.i,b=t.tBodies[0],dir=th.dataset.d=th.dataset.d=='a'?'d':'a';
+  const rs=[...b.rows].filter(r=>!r.classList.contains('sub'));b.querySelectorAll('.sub').forEach(r=>r.remove());
+  rs.sort((x,y)=>{let a=x.cells[i].dataset.v,c=y.cells[i].dataset.v,na=parseFloat(a),nc=parseFloat(c);let r=(!isNaN(na)&&!isNaN(nc))?na-nc:a.localeCompare(c);return dir=='a'?r:-r}).forEach(r=>b.appendChild(r))});
+ document.querySelectorAll('#inf .pill').forEach(p=>p.onclick=()=>{document.querySelectorAll('#inf .pill').forEach(x=>x.classList.remove('on'));p.classList.add('on');const m=p.dataset.f;
+  document.querySelectorAll('#ti tbody tr').forEach(r=>r.style.display=m=='all'||(m=='jh'&&r.classList.contains('jh'))||(m=='other'&&r.classList.contains('oth'))?'':'none')});
+ let dr;document.querySelectorAll('section').forEach(s=>{const h=s.querySelector('.h');h.onmousedown=()=>s.draggable=true;s.ondragstart=()=>{dr=s;s.classList.add('drag')};
+  s.ondragend=()=>{s.classList.remove('drag');s.draggable=false;localStorage.setItem('jhorder',JSON.stringify([...document.querySelectorAll('section')].map(x=>x.dataset.k)))};
+  s.ondragover=e=>{e.preventDefault();if(dr&&dr!==s){const r=s.getBoundingClientRect();s.parentNode.insertBefore(dr,e.clientY<r.top+r.height/2?s:s.nextSibling)}}})}
+fetch('data.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;$('#meta').textContent=`Lynn Reichlyn · John Hancock LTC reimbursements vs care payments · Synovus checking ${d.range.synovus[0]} → ${d.range.synovus[1]} + Citi card care charges · updated ${d.generated}`;
+ const ys=['All',...new Set(d.by_month.map(b=>b.month.slice(0,4)))];$('#pills').innerHTML=ys.map(y=>`<button class="pill ${y==YR?'on':''}" data-y="${y}">${y}</button>`).join('');
+ document.querySelectorAll('#pills .pill').forEach(p=>p.onclick=()=>{YR=p.dataset.y;document.querySelectorAll('#pills .pill').forEach(x=>x.classList.toggle('on',x==p));render()});render()});
+</script></body></html>
