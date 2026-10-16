@@ -26,12 +26,12 @@ section{background:#0f0f0f;border:1px solid var(--line);border-radius:14px;paddi
 const $=s=>document.querySelector(s),f=n=>(n<0?'−':'')+'$'+Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}),
 cl=n=>n<0?'neg':n>0?'pos':'',sg=n=>`<span class="${cl(n)}">${f(n)}</span>`;let D,YR='All',ch;
 const tierTag=t=>t=='30+ overdue'?'<span class="tag r">30+ overdue</span>':t=='2 wks overdue'?'<span class="tag y">2 wks overdue</span>':'<span class="tag g">within 14 days</span>';
-const inY=d=>YR=='All'||d.startsWith(YR);const S=a=>a.reduce((s,x)=>s+x.amount,0);
+const inY=d=>YR=='All'||d.startsWith(YR);const S2=(a,k)=>a.reduce((s,x)=>s+x[k],0);const S=a=>a.reduce((s,x)=>s+x.amount,0);
 function tbl(id,cols,rows,rowcls){return `<div class="scroll"><table id="${id}"><thead><tr>${cols.map((c,i)=>`<th class="${c[2]||''}" data-i="${i}">${c[0]}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>r.sub?`<tr class="sub"><td colspan="${cols.length}">${r.sub}</td></tr>`:`<tr class="${rowcls?rowcls(r):''}">${cols.map(c=>`<td class="${c[2]||''}" data-v="${typeof c[1](r,1)=='number'?c[1](r,1):String(c[1](r,1)).replace(/"/g,'')}">${c[1](r)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
 function render(){
  const um=D.unmatched.filter(p=>inY(p.date)),mt=D.matched.filter(p=>inY(p.date)),ins=D.ins.filter(i=>inY(i.date)),jh=ins.filter(i=>i.jh),pays=um.concat(mt);
  const T=t=>um.filter(p=>p.tier==t),jhT=S(jh),care=S(pays),owed=S(um);
- const sec={};
+ const sec={};const bm=D.by_month.filter(b=>inY(b.month));const OV=bm.reduce((s,b)=>s+b.over,0);
  sec.owed=`<h2><span class="h">≡</span>STILL OWED BY JH</h2><div class="cards">
   <div class="card big"><div class="l">Still owed by JH</div><div class="v neg">${f(owed)}</div><div class="s">${um.length} care payments with no matching JH deposit</div></div>
   <div class="card"><div class="l">Within 14 days</div><div class="v">${f(S(T('within 14 days')))}</div><div class="s">${T('within 14 days').length} payments · not overdue yet</div></div>
@@ -42,12 +42,14 @@ function render(){
   <div class="card"><div class="l">JH received</div><div class="v pos">${f(jhT)}</div><div class="s">${jh.length} deposits</div></div>
   <div class="card"><div class="l">Care expenses</div><div class="v neg">${f(-care)}</div><div class="s">${pays.length} payments (Synovus + Citi)</div></div>
   <div class="card"><div class="l">Net gap / shortage</div><div class="v">${sg(jhT-care)}</div><div class="s">JH received − care paid</div></div>
+  <div class="card" style="border-color:var(--red)"><div class="l">Spend over plan ($9,867/mo)</div><div class="v neg">${f(-bm.reduce((s,b)=>s+b.over,0))}</div><div class="s">${bm.filter(b=>b.over>0).length} of ${bm.length} months over plan</div></div>
   <div class="card"><div class="l">Matched to JH</div><div class="v pos">${f(S(mt))}</div><div class="s">${mt.length} payments</div></div>
   <div class="card"><div class="l">JH deposits not matched</div><div class="v">${f(S(jh.filter(j=>!j.matched)))}</div><div class="s">JH paid amounts that don't equal one payment (partial / combined)</div></div></div>`;
- const bm=D.by_month.filter(b=>inY(b.month));
- sec.month=`<h2><span class="h">≡</span>BY MONTH</h2><div class="chart"><canvas id="cm"></canvas></div>`+tbl('tm',[['Month',r=>r.month,'t'],['JH received',(r,v)=>v?r.jh:sg(r.jh)],['Care paid',(r,v)=>v?-r.care:sg(-r.care)],['Net',(r,v)=>v?r.net:sg(r.net)]],bm);
+ sec.month=`<h2><span class="h">≡</span>BY MONTH</h2><div class="chart"><canvas id="cm"></canvas></div>`+tbl('tm',[['Month',r=>r.month,'t'],['JH received',(r,v)=>v?r.jh:sg(r.jh)],['Care paid',(r,v)=>v?-r.care:sg(-r.care)],['Net',(r,v)=>v?r.net:sg(r.net)],['Over Plan',(r,v)=>v?-r.over:(r.over>0?sg(-r.over):'—')]],bm)+`<table style="margin-top:-1px"><tr style="font-weight:700"><td class="t">TOTAL</td><td>${sg(S2(bm,'jh'))}</td><td>${sg(-S2(bm,'care'))}</td><td>${sg(S2(bm,'net'))}</td><td>${sg(-OV)}</td></tr></table>`;
  const vs=[...new Set(pays.map(p=>p.vendor))].map(v=>{const a=pays.filter(p=>p.vendor==v),r=mt.filter(p=>p.vendor==v),o=um.filter(p=>p.vendor==v);return{v,n:a.length,paid:S(a),re:S(r),ow:S(o)}});
- sec.vendor=`<h2><span class="h">≡</span>BY VENDOR</h2>`+tbl('tv',[['Vendor',r=>r.v,'t'],['Payments',r=>r.n],['Paid',(r,v)=>v?-r.paid:sg(-r.paid)],['Reimbursed (matched)',(r,v)=>v?r.re:sg(r.re)],['Gap / still owed',(r,v)=>v?-r.ow:sg(-r.ow)]],vs);
+ sec.vendor=`<h2><span class="h">≡</span>BY VENDOR</h2>`+tbl('tv',[['Vendor',r=>r.v,'t'],['Payments',r=>r.n],['Paid',(r,v)=>v?-r.paid:sg(-r.paid)],['Reimbursed (matched)',(r,v)=>v?r.re:sg(r.re)],['Gap / still owed',(r,v)=>v?-r.ow:sg(-r.ow)],['Over Plan',(r,v)=>'']],vs)+`<table style="margin-top:-1px"><tr style="font-weight:700"><td class="t">TOTAL</td><td>${pays.length}</td><td>${sg(-care)}</td><td>${sg(S(mt))}</td><td>${sg(-owed)}</td><td>${sg(-OV)} over plan</td></tr></table>`;
+ const vp=vs.slice().sort((a,b)=>b.paid-a.paid);
+ sec.paid=`<h2><span class="h">≡</span>PAID TO CAREGIVER VENDORS</h2><div class="cards"><div class="card big"><div class="l">Total paid to care vendors</div><div class="v neg">${f(-care)}</div><div class="s">${pays.length} payments · Synovus + Citi</div></div>${vp.map(v=>`<div class="card"><div class="l">${v.v}</div><div class="v neg">${f(-v.paid)}</div><div class="s">${v.n} payments · ${care?(v.paid/care*100).toFixed(1):0}% of total</div></div>`).join('')}</div>`;
  const g=[];[...new Set(um.map(p=>p.vendor))].sort().forEach(v=>{const a=um.filter(p=>p.vendor==v).sort((x,y)=>y.date.localeCompare(x.date));g.push({sub:`${v} — ${f(S(a))} (${a.length})`},...a)});
  sec.chase=`<h2><span class="h">≡</span>UNMATCHED PAYMENTS — CHASE LIST</h2><div class="muted" style="margin-bottom:8px">JH expected within 2 weeks. Yellow = 2 wks overdue (14–29 days) · Red = 30+ days overdue. Match rule: same amount ±$0.10, JH posted 7 days before to 35 days after.</div>`+tbl('tc',[['Date',r=>r.date,'t'],['Vendor',r=>r.vendor,'t'],['Source',r=>r.src,'t'],['Amount',(r,v)=>v?-r.amount:sg(-r.amount)],['Days unpaid',r=>r.days],['Status',(r,v)=>v?r.tier:tierTag(r.tier),'t']],g,r=>r.tier=='30+ overdue'?'r':r.tier=='2 wks overdue'?'y':'');
  const bs={};ins.forEach(i=>{bs[i.source]=bs[i.source]||{s:i.source,n:0,a:0};bs[i.source].n++;bs[i.source].a+=i.amount});
@@ -56,7 +58,7 @@ function render(){
   tbl('ti',[['Date',r=>r.date,'t'],['Source',(r,v)=>v?r.source:(r.jh?'<span class="tag jh">JH</span> ':'')+r.source,'t'],['Amount',(r,v)=>v?r.amount:sg(r.amount)],['Matched to',r=>r.jh?(r.matched||'— not matched'):'','t']],ins,r=>r.jh?'jh':'oth');
  const g2=[];[...new Set(mt.map(p=>p.vendor))].sort().forEach(v=>{const a=mt.filter(p=>p.vendor==v).sort((x,y)=>y.date.localeCompare(x.date));g2.push({sub:`${v} — ${f(S(a))} (${a.length})`},...a)});
  sec.matched=`<h2><span class="h">≡</span>MATCHED PAYMENTS (REIMBURSED)</h2>`+tbl('tmt',[['Date',r=>r.date,'t'],['Vendor',r=>r.vendor,'t'],['Source',r=>r.src,'t'],['Amount',(r,v)=>v?-r.amount:sg(-r.amount)],['JH deposit',r=>r.match,'t'],['Days to JH',r=>r.lag]],g2);
- const def=['owed','sum','month','vendor','chase','ins','matched'];let ord=JSON.parse(localStorage.getItem('jhorder')||'null');if(!ord||ord.length!=def.length)ord=def;
+ const def=['owed','sum','paid','month','vendor','chase','ins','matched'];let ord=JSON.parse(localStorage.getItem('jhorder')||'null');if(!ord||ord.length!=def.length)ord=def;
  $('#secs').innerHTML=ord.map(k=>`<section draggable="false" data-k="${k}">${sec[k]}</section>`).join('');
  if(window.Chart){ch&&ch.destroy();ch=new Chart($('#cm'),{type:'bar',data:{labels:bm.map(b=>b.month),datasets:[{label:'JH received',data:bm.map(b=>b.jh),backgroundColor:'#22c55e'},{label:'Care paid',data:bm.map(b=>b.care),backgroundColor:'#ef4444'},{type:'line',label:'Net',data:bm.map(b=>b.net),borderColor:'#d4af37',backgroundColor:'#d4af37'}]},options:{maintainAspectRatio:false,plugins:{legend:{labels:{color:'#e5e5e5'}}},scales:{x:{ticks:{color:'#a3a3a3'},grid:{color:'#262626'}},y:{ticks:{color:'#a3a3a3'},grid:{color:'#262626'}}}}})}
  wire()}
