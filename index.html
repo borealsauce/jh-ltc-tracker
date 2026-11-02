@@ -75,8 +75,7 @@ fetch('data.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;$('#meta').textCon
 </script><script>
 let VD,VS='All';const VN=['All','Home RN','FirstLight','LifeWorx','BrightStar'];
 function vrender(){const s=VD.summary[VS],L=VD.payments.filter(p=>VS=='All'||p.vendor==VS),pend=!s.eob_n;
- const eob=pend?`<div class="card"><div class="l">Paid per EOBs</div><div class="v" style="color:var(--muted)">Pending EOB totals</div><div class="s">No JH EOBs on file for ${VS} in 2026</div></div>`
- :`<div class="card"><div class="l">Paid per EOBs</div><div class="v pos">${f(s.eob)}</div><div class="s">${s.eob_n} EOBs · latest EOB ${s.eob_last}</div></div>`;
+ const eob=`<div class="card"><div class="l">Paid per EOBs</div><div class="v ${s.eob?'pos':''}">${f(s.eob)}</div><div class="s">${s.eob_n?s.eob_n+' EOBs':'No EOBs on file'} · per EOBs through Aug 11, 2026 · newer EOBs need the JH portal</div></div>`;
  const tag=t=>t=='Covered by EOB'?'<span class="tag jh">Covered by EOB</span>':t=='30+ overdue'?'<span class="tag r">30+ overdue</span>':t=='2–4 wks overdue'?'<span class="tag y">2–4 wks overdue</span>':'<span class="tag g">within 14 days</span>';
  $('#vend').innerHTML=`<h2>VENDOR VIEW — ${VS.toUpperCase()} · 2026 YTD</h2><div class="cards">
  <div class="card"><div class="l">Payments made</div><div class="v neg">${f(s.paid)}</div><div class="s">${s.paid_n} payments (Synovus + Citi)</div></div>${eob}
