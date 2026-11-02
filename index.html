@@ -66,8 +66,8 @@ function render(){
 function wire(){
  document.querySelectorAll('#inf .pill').forEach(p=>p.onclick=()=>{document.querySelectorAll('#inf .pill').forEach(x=>x.classList.remove('on'));p.classList.add('on');const m=p.dataset.f;
   document.querySelectorAll('#ti tbody tr').forEach(r=>r.style.display=m=='all'||(m=='jh'&&r.classList.contains('jh'))||(m=='other'&&r.classList.contains('oth'))?'':'none')});
- let dr;document.querySelectorAll('section').forEach(s=>{const h=s.querySelector('.h');h.onmousedown=()=>s.draggable=true;s.ondragstart=()=>{dr=s;s.classList.add('drag')};
-  s.ondragend=()=>{s.classList.remove('drag');s.draggable=false;localStorage.setItem('jhorder',JSON.stringify([...document.querySelectorAll('section')].map(x=>x.dataset.k)))};
+ let dr;document.querySelectorAll('section').forEach(s=>{const h=s.querySelector('.h');if(!h)return;h.onmousedown=()=>s.draggable=true;s.ondragstart=()=>{dr=s;s.classList.add('drag')};
+  s.ondragend=()=>{s.classList.remove('drag');s.draggable=false;localStorage.setItem('jhorder',JSON.stringify([...document.querySelectorAll('#secs section')].map(x=>x.dataset.k)))};
   s.ondragover=e=>{e.preventDefault();if(dr&&dr!==s){const r=s.getBoundingClientRect();s.parentNode.insertBefore(dr,e.clientY<r.top+r.height/2?s:s.nextSibling)}}})}
 fetch('data.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;$('#meta').textContent=`Lynn Reichlyn · John Hancock LTC reimbursements vs care payments · Synovus checking ${d.range.synovus[0]} → ${d.range.synovus[1]} + Citi card care charges · updated ${d.generated}`;
  const ys=['All',...new Set(d.by_month.map(b=>b.month.slice(0,4)))];$('#pills').innerHTML=ys.map(y=>`<button class="pill ${y==YR?'on':''}" data-y="${y}">${y}</button>`).join('');
