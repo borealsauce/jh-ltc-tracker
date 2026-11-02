@@ -12,15 +12,16 @@ h1,h2{font-family:Oswald,sans-serif;letter-spacing:.05em;color:var(--gold);margi
 .card .l{font:700 11px Inter;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}.card .v{font:700 24px Oswald;margin-top:4px}.card .s{font-size:12px;color:var(--muted)}
 .big .v{font-size:40px}.big{border-color:var(--gold)}
 table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line)}th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
-th{background:#1c1c1c;color:var(--gold);cursor:pointer;user-select:none}td:first-child,th:first-child{text-align:left}td.t,th.t{text-align:left}
+th{position:relative;background:#1c1c1c;color:var(--gold);cursor:pointer;user-select:none}td:first-child,th:first-child{text-align:left}td.t,th.t{text-align:left}
 .neg{color:var(--red)}.pos{color:var(--green)}.scroll{overflow-x:auto}tr.y td{background:rgba(250,204,21,.12)}tr.r td{background:rgba(239,68,68,.13)}
 .sub td{background:#1f1a0c;color:var(--gold);font-weight:700;text-align:left}.tag{padding:2px 8px;border-radius:99px;font-size:11px;font-weight:700}.tag.y{background:var(--yel);color:#000}.tag.r{background:var(--red);color:#fff}.tag.g{background:#333}.tag.jh{background:var(--gold);color:#000}
 section{background:#0f0f0f;border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}.h{cursor:grab;color:var(--muted);font-size:18px}section.drag{opacity:.4}
 .pills{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.pill{border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:99px;padding:7px 16px;font:600 13px Inter;cursor:pointer}.pill.on{background:var(--gold);color:#000;border-color:var(--gold)}
 .chart{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;height:300px;margin-bottom:12px}button.rst{float:right;background:none;border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:6px 12px;cursor:pointer}
-</style></head><body>
+.rz{position:absolute;right:0;top:0;bottom:0;width:6px;cursor:col-resize}.rz:hover{background:var(--gold)}table.fx{table-layout:fixed}td{overflow:hidden;text-overflow:ellipsis}</style></head><body>
 <div class="top"><div class="wrap" style="padding-bottom:0"><button class="rst" onclick="localStorage.removeItem('jhorder');location.reload()">Reset layout</button><h1>JH LTC TRACKER</h1><div class="muted" id="meta"></div>
-<div class="pills" id="pills"></div></div></div>
+<div class="pills" id="pills"></div><div class="pills" id="vpills"></div></div></div>
+<div class="wrap"><section id="vend"></section></div>
 <div class="wrap" id="secs"></div>
 <script>
 const $=s=>document.querySelector(s),f=n=>(n<0?'−':'')+'$'+Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}),
@@ -71,7 +72,29 @@ function wire(){
 fetch('data.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;$('#meta').textContent=`Lynn Reichlyn · John Hancock LTC reimbursements vs care payments · Synovus checking ${d.range.synovus[0]} → ${d.range.synovus[1]} + Citi card care charges · updated ${d.generated}`;
  const ys=['All',...new Set(d.by_month.map(b=>b.month.slice(0,4)))];$('#pills').innerHTML=ys.map(y=>`<button class="pill ${y==YR?'on':''}" data-y="${y}">${y}</button>`).join('');
  document.querySelectorAll('#pills .pill').forEach(p=>p.onclick=()=>{YR=p.dataset.y;document.querySelectorAll('#pills .pill').forEach(x=>x.classList.toggle('on',x==p));render()});render()});
-</script><!--SORTABLE-START--><script>
+</script><script>
+let VD,VS='All';const VN=['All','Home RN','FirstLight','LifeWorx','BrightStar'];
+function vrender(){const s=VD.summary[VS],L=VD.payments.filter(p=>VS=='All'||p.vendor==VS),pend=!s.eob_n;
+ const eob=pend?`<div class="card"><div class="l">Paid per EOBs</div><div class="v" style="color:var(--muted)">Pending EOB totals</div><div class="s">No JH EOBs on file for ${VS} in 2026</div></div>`
+ :`<div class="card"><div class="l">Paid per EOBs</div><div class="v pos">${f(s.eob)}</div><div class="s">${s.eob_n} EOBs · latest EOB ${s.eob_last}</div></div>`;
+ const tag=t=>t=='Covered by EOB'?'<span class="tag jh">Covered by EOB</span>':t=='30+ overdue'?'<span class="tag r">30+ overdue</span>':t=='2–4 wks overdue'?'<span class="tag y">2–4 wks overdue</span>':'<span class="tag g">within 14 days</span>';
+ $('#vend').innerHTML=`<h2>VENDOR VIEW — ${VS.toUpperCase()} · 2026 YTD</h2><div class="cards">
+ <div class="card"><div class="l">Payments made</div><div class="v neg">${f(s.paid)}</div><div class="s">${s.paid_n} payments (Synovus + Citi)</div></div>${eob}
+ <div class="card big"><div class="l">Still unpaid</div><div class="v neg">${f(s.un)}</div><div class="s">${s.un_n} payments not covered by EOBs</div></div>
+ <div class="card" style="border-color:var(--red)"><div class="l">30+ days</div><div class="v neg">${f(s.od30)}</div><div class="s">${s.od30_n} payments</div></div>
+ <div class="card" style="border-color:var(--yel)"><div class="l">2–4 weeks</div><div class="v neg">${f(s.od2)}</div><div class="s">${s.od2_n} payments</div></div></div>
+ <div class="muted" style="margin:8px 0">Reimbursed = JH EOBs only (latest EOB ${VD.eob_last}); EOB dollars applied to that vendor's oldest payments first. As of ${VD.as_of}.</div>`+
+ tbl('tvp',[['Date',r=>r.date,'t'],['Vendor',r=>r.vendor,'t'],['Source',r=>r.src,'t'],['Amount',(r,v)=>v?-r.amount:sg(-r.amount)],['Covered by EOB',(r,v)=>v?r.eob_cov:f(r.eob_cov)],['Still unpaid',(r,v)=>v?-r.open:sg(-r.open)],['Days',r=>r.days],['Status',(r,v)=>v?r.status:tag(r.status),'t']],L,r=>r.status=='30+ overdue'?'r':r.status=='2–4 wks overdue'?'y':'');rz()}
+fetch('vendors.json?'+Date.now()).then(r=>r.json()).then(d=>{VD=d;$('#vpills').innerHTML=VN.map(v=>`<button class="pill ${v==VS?'on':''}" data-v="${v}">${v}</button>`).join('');
+ document.querySelectorAll('#vpills .pill').forEach(p=>p.onclick=()=>{VS=p.dataset.v;document.querySelectorAll('#vpills .pill').forEach(x=>x.classList.toggle('on',x==p));vrender()});vrender()});
+function rz(){document.querySelectorAll('th').forEach(th=>{if(th.querySelector('.rz'))return;const g=document.createElement('span');g.className='rz';th.appendChild(g);
+ g.addEventListener('click',e=>e.stopPropagation());g.addEventListener('mousedown',e=>{e.preventDefault();e.stopPropagation();const t=th.closest('table');
+ if(!t.classList.contains('fx')){[...t.rows[0].cells].forEach(c=>c.style.width=c.offsetWidth+'px');t.style.width=t.offsetWidth+'px';t.classList.add('fx')}
+ const x=e.clientX,w=th.offsetWidth,tw=t.offsetWidth;const mv=m=>{const nw=Math.max(40,w+m.clientX-x);th.style.width=nw+'px';t.style.width=(tw+nw-w)+'px'};
+ const up=()=>{document.removeEventListener('mousemove',mv);document.removeEventListener('mouseup',up)};document.addEventListener('mousemove',mv);document.addEventListener('mouseup',up)})})}
+new MutationObserver(()=>rz()).observe(document.body,{childList:true,subtree:true});
+</script>
+<!--SORTABLE-START--><script>
 /* Shared sortable tables (Grok Bot trackers). Click any header: asc/desc toggle with ▲/▼.
    Works on dynamically rendered tables via event delegation. Totals (tfoot, .total/.ft/.tot rows,
    or first cell TOTAL/ALL-TIME/GRAND) stay pinned at bottom. Group-label rows (fewer cells / colspan)

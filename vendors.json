@@ -1,0 +1,1253 @@
+{
+"as_of": "2026-11-02",
+"eob_last": "2026-08-11",
+"payments": [
+{
+"date": "2026-10-30",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 225.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 225.0,
+"days": 3,
+"status": "Within 14 days"
+},
+{
+"date": "2026-10-26",
+"vendor": "FirstLight",
+"src": "Finance Plaid \u20260452",
+"amount": 2093.13,
+"desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
+"eob_cov": 0.0,
+"open": 2093.13,
+"days": 7,
+"status": "Within 14 days"
+},
+{
+"date": "2026-10-23",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 75.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 75.0,
+"days": 10,
+"status": "Within 14 days"
+},
+{
+"date": "2026-10-19",
+"vendor": "FirstLight",
+"src": "Finance Plaid \u20260452",
+"amount": 2008.66,
+"desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
+"eob_cov": 0.0,
+"open": 2008.66,
+"days": 14,
+"status": "2\u20134 wks overdue"
+},
+{
+"date": "2026-10-16",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 175.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 175.0,
+"days": 17,
+"status": "2\u20134 wks overdue"
+},
+{
+"date": "2026-10-15",
+"vendor": "LifeWorx",
+"src": "Finance Plaid \u20260452",
+"amount": 4656.63,
+"desc": "IN *LIFEWORX SOUTH CAR",
+"eob_cov": 0.0,
+"open": 4656.63,
+"days": 18,
+"status": "2\u20134 wks overdue"
+},
+{
+"date": "2026-10-12",
+"vendor": "FirstLight",
+"src": "Finance Plaid \u20260452",
+"amount": 2232.01,
+"desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
+"eob_cov": 0.0,
+"open": 2232.01,
+"days": 21,
+"status": "2\u20134 wks overdue"
+},
+{
+"date": "2026-10-09",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 75.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 75.0,
+"days": 24,
+"status": "2\u20134 wks overdue"
+},
+{
+"date": "2026-10-07",
+"vendor": "LifeWorx",
+"src": "Finance Plaid \u20260452",
+"amount": 480.0,
+"desc": "IN *LIFEWORX SOUTH CAR",
+"eob_cov": 0.0,
+"open": 480.0,
+"days": 26,
+"status": "2\u20134 wks overdue"
+},
+{
+"date": "2026-10-05",
+"vendor": "FirstLight",
+"src": "Finance Plaid \u20260452",
+"amount": 1894.97,
+"desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
+"eob_cov": 0.0,
+"open": 1894.97,
+"days": 28,
+"status": "2\u20134 wks overdue"
+},
+{
+"date": "2026-10-02",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 225.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 225.0,
+"days": 31,
+"status": "30+ overdue"
+},
+{
+"date": "2026-09-29",
+"vendor": "LifeWorx",
+"src": "Finance Plaid \u20260452",
+"amount": 579.0,
+"desc": "IN *LIFEWORX SOUTH CAR",
+"eob_cov": 0.0,
+"open": 579.0,
+"days": 34,
+"status": "30+ overdue"
+},
+{
+"date": "2026-09-28",
+"vendor": "FirstLight",
+"src": "Finance Plaid \u20260452",
+"amount": 2179.63,
+"desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
+"eob_cov": 0.0,
+"open": 2179.63,
+"days": 35,
+"status": "30+ overdue"
+},
+{
+"date": "2026-09-25",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 75.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 75.0,
+"days": 38,
+"status": "30+ overdue"
+},
+{
+"date": "2026-09-22",
+"vendor": "FirstLight",
+"src": "Finance Plaid \u20260452",
+"amount": 2064.83,
+"desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
+"eob_cov": 0.0,
+"open": 2064.83,
+"days": 41,
+"status": "30+ overdue"
+},
+{
+"date": "2026-09-18",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 175.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 175.0,
+"days": 45,
+"status": "30+ overdue"
+},
+{
+"date": "2026-09-14",
+"vendor": "FirstLight",
+"src": "Finance Plaid \u20260452",
+"amount": 1902.02,
+"desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
+"eob_cov": 0.0,
+"open": 1902.02,
+"days": 49,
+"status": "30+ overdue"
+},
+{
+"date": "2026-09-11",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 75.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 75.0,
+"days": 52,
+"status": "30+ overdue"
+},
+{
+"date": "2026-09-08",
+"vendor": "LifeWorx",
+"src": "Finance Plaid \u20260452",
+"amount": 4273.33,
+"desc": "IN *LIFEWORX SOUTH CAR",
+"eob_cov": 0.0,
+"open": 4273.33,
+"days": 55,
+"status": "30+ overdue"
+},
+{
+"date": "2026-09-08",
+"vendor": "FirstLight",
+"src": "Finance Plaid \u20260452",
+"amount": 1648.59,
+"desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
+"eob_cov": 0.0,
+"open": 1648.59,
+"days": 55,
+"status": "30+ overdue"
+},
+{
+"date": "2026-09-04",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 175.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 175.0,
+"days": 59,
+"status": "30+ overdue"
+},
+{
+"date": "2026-08-31",
+"vendor": "FirstLight",
+"src": "Finance Plaid \u20260452",
+"amount": 1357.04,
+"desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
+"eob_cov": 0.0,
+"open": 1357.04,
+"days": 63,
+"status": "30+ overdue"
+},
+{
+"date": "2026-08-28",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 75.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 75.0,
+"days": 66,
+"status": "30+ overdue"
+},
+{
+"date": "2026-08-24",
+"vendor": "FirstLight",
+"src": "Finance Plaid \u20260452",
+"amount": 2056.71,
+"desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
+"eob_cov": 0.0,
+"open": 2056.71,
+"days": 70,
+"status": "30+ overdue"
+},
+{
+"date": "2026-08-21",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 175.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 175.0,
+"days": 73,
+"status": "30+ overdue"
+},
+{
+"date": "2026-08-18",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 1811.49,
+"desc": "FIRSTLIGHT HOME",
+"eob_cov": 0.0,
+"open": 1811.49,
+"days": 76,
+"status": "30+ overdue"
+},
+{
+"date": "2026-08-14",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 75.0,
+"desc": "HOMERN CHARLESTO",
+"eob_cov": 0,
+"open": 75.0,
+"days": 80,
+"status": "30+ overdue"
+},
+{
+"date": "2026-08-11",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 2098.24,
+"desc": "FIRSTLIGHT HOME",
+"eob_cov": 0.0,
+"open": 2098.24,
+"days": 83,
+"status": "30+ overdue"
+},
+{
+"date": "2026-08-07",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 175.0,
+"desc": "HOMERN CHARLESTO",
+"eob_cov": 0,
+"open": 175.0,
+"days": 87,
+"status": "30+ overdue"
+},
+{
+"date": "2026-08-07",
+"vendor": "LifeWorx",
+"src": "Finance Plaid \u20260452",
+"amount": 6147.33,
+"desc": "IN *LIFEWORX SOUTH CAR",
+"eob_cov": 0.0,
+"open": 6147.33,
+"days": 87,
+"status": "30+ overdue"
+},
+{
+"date": "2026-08-04",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 1108.3,
+"desc": "FIRSTLIGHT HOME",
+"eob_cov": 0.0,
+"open": 1108.3,
+"days": 90,
+"status": "30+ overdue"
+},
+{
+"date": "2026-08-04",
+"vendor": "BrightStar",
+"src": "Finance Plaid \u20260452",
+"amount": 321.74,
+"desc": "BrightStar Care of Cha MOUNT PLEASAN",
+"eob_cov": 0,
+"open": 321.74,
+"days": 90,
+"status": "30+ overdue"
+},
+{
+"date": "2026-07-31",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 86.96,
+"desc": "HOMERN CHARLESTO",
+"eob_cov": 0,
+"open": 86.96,
+"days": 94,
+"status": "30+ overdue"
+},
+{
+"date": "2026-07-28",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 1980.24,
+"desc": "FIRSTLIGHT HOME",
+"eob_cov": 0.0,
+"open": 1980.24,
+"days": 97,
+"status": "30+ overdue"
+},
+{
+"date": "2026-07-24",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 175.0,
+"desc": "HOMERN CHARLESTO",
+"eob_cov": 0,
+"open": 175.0,
+"days": 101,
+"status": "30+ overdue"
+},
+{
+"date": "2026-07-21",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 1284.57,
+"desc": "FIRSTLIGHT HOME",
+"eob_cov": 0.0,
+"open": 1284.57,
+"days": 104,
+"status": "30+ overdue"
+},
+{
+"date": "2026-07-17",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 75.0,
+"desc": "HOMERN CHARLESTO",
+"eob_cov": 0,
+"open": 75.0,
+"days": 108,
+"status": "30+ overdue"
+},
+{
+"date": "2026-07-14",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 1977.3,
+"desc": "FIRSTLIGHT HOME",
+"eob_cov": 0.0,
+"open": 1977.3,
+"days": 111,
+"status": "30+ overdue"
+},
+{
+"date": "2026-07-10",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 175.0,
+"desc": "HOMERN CHARLESTO",
+"eob_cov": 0,
+"open": 175.0,
+"days": 115,
+"status": "30+ overdue"
+},
+{
+"date": "2026-07-07",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 2109.56,
+"desc": "FIRSTLIGHT HOME",
+"eob_cov": 0.0,
+"open": 2109.56,
+"days": 118,
+"status": "30+ overdue"
+},
+{
+"date": "2026-07-07",
+"vendor": "LifeWorx",
+"src": "Finance Plaid \u20260452",
+"amount": 17340.66,
+"desc": "IN *LIFEWORX SOUTH CAR",
+"eob_cov": 9445.58,
+"open": 7895.08,
+"days": 118,
+"status": "30+ overdue"
+},
+{
+"date": "2026-07-03",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 75.0,
+"desc": "HOMERN CHARLESTO",
+"eob_cov": 0,
+"open": 75.0,
+"days": 122,
+"status": "30+ overdue"
+},
+{
+"date": "2026-06-30",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 1255.01,
+"desc": "FIRSTLIGHT HOME",
+"eob_cov": 0.0,
+"open": 1255.01,
+"days": 125,
+"status": "30+ overdue"
+},
+{
+"date": "2026-06-26",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 175.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 175.0,
+"days": 129,
+"status": "30+ overdue"
+},
+{
+"date": "2026-06-23",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 1796.46,
+"desc": "FIRSTLIGHT HOME",
+"eob_cov": 1516.53,
+"open": 279.93,
+"days": 132,
+"status": "30+ overdue"
+},
+{
+"date": "2026-06-22",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 175.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 175.0,
+"days": 133,
+"status": "30+ overdue"
+},
+{
+"date": "2026-06-16",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 2002.22,
+"desc": "FIRSTLIGHT HOME",
+"eob_cov": 2002.22,
+"open": 0.0,
+"days": 139,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-06-12",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 175.0,
+"desc": "HOMERN CHARLESTO",
+"eob_cov": 0,
+"open": 175.0,
+"days": 143,
+"status": "30+ overdue"
+},
+{
+"date": "2026-06-09",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 1546.49,
+"desc": "FirstLight Home",
+"eob_cov": 1546.49,
+"open": 0.0,
+"days": 146,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-06-05",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 175.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 175.0,
+"days": 150,
+"status": "30+ overdue"
+},
+{
+"date": "2026-06-02",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 1805.36,
+"desc": "FirstLight Home",
+"eob_cov": 1805.36,
+"open": 0.0,
+"days": 153,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-05-29",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 175.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 175.0,
+"days": 157,
+"status": "30+ overdue"
+},
+{
+"date": "2026-05-27",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 1629.34,
+"desc": "FirstLight Home",
+"eob_cov": 1629.34,
+"open": 0.0,
+"days": 159,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-05-22",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 175.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 175.0,
+"days": 164,
+"status": "30+ overdue"
+},
+{
+"date": "2026-05-19",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 778.82,
+"desc": "FirstLight Home",
+"eob_cov": 778.82,
+"open": 0.0,
+"days": 167,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-05-15",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 175.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 175.0,
+"days": 171,
+"status": "30+ overdue"
+},
+{
+"date": "2026-05-12",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 891.85,
+"desc": "FirstLight Home",
+"eob_cov": 891.85,
+"open": 0.0,
+"days": 174,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-05-08",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 1333.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 1333.0,
+"days": 178,
+"status": "30+ overdue"
+},
+{
+"date": "2026-05-05",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 521.7,
+"desc": "FirstLight Home",
+"eob_cov": 521.7,
+"open": 0.0,
+"days": 181,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-05-01",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 1391.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 1391.0,
+"days": 185,
+"status": "30+ overdue"
+},
+{
+"date": "2026-04-28",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 443.18,
+"desc": "FirstLight Home",
+"eob_cov": 443.18,
+"open": 0.0,
+"days": 188,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-04-24",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 1664.8,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 1664.8,
+"days": 192,
+"status": "30+ overdue"
+},
+{
+"date": "2026-04-21",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 413.77,
+"desc": "FirstLight Home",
+"eob_cov": 413.77,
+"open": 0.0,
+"days": 195,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-04-17",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 1744.2,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 1744.2,
+"days": 199,
+"status": "30+ overdue"
+},
+{
+"date": "2026-04-14",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 232.77,
+"desc": "FirstLight Home",
+"eob_cov": 232.77,
+"open": 0.0,
+"days": 202,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-04-10",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 1786.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 1786.0,
+"days": 206,
+"status": "30+ overdue"
+},
+{
+"date": "2026-04-03",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 1792.38,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 1792.38,
+"days": 213,
+"status": "30+ overdue"
+},
+{
+"date": "2026-03-31",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 185.0,
+"desc": "FirstLight Home",
+"eob_cov": 185.0,
+"open": 0.0,
+"days": 216,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-03-27",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 2094.17,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 2094.17,
+"days": 220,
+"status": "30+ overdue"
+},
+{
+"date": "2026-03-24",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 469.57,
+"desc": "FirstLight Home",
+"eob_cov": 469.57,
+"open": 0.0,
+"days": 223,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-03-20",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 2233.63,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 2233.63,
+"days": 227,
+"status": "30+ overdue"
+},
+{
+"date": "2026-03-17",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 751.02,
+"desc": "FirstLight Home",
+"eob_cov": 751.02,
+"open": 0.0,
+"days": 230,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-03-13",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 2106.5,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 2106.5,
+"days": 234,
+"status": "30+ overdue"
+},
+{
+"date": "2026-03-10",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 682.65,
+"desc": "FirstLight Home",
+"eob_cov": 682.65,
+"open": 0.0,
+"days": 237,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-03-06",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 2188.23,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 2188.23,
+"days": 241,
+"status": "30+ overdue"
+},
+{
+"date": "2026-03-03",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 637.32,
+"desc": "FirstLight Home",
+"eob_cov": 637.32,
+"open": 0.0,
+"days": 244,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-02-27",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 2497.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 2497.0,
+"days": 248,
+"status": "30+ overdue"
+},
+{
+"date": "2026-02-24",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 458.8,
+"desc": "FirstLight Home",
+"eob_cov": 458.8,
+"open": 0.0,
+"days": 251,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-02-20",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 2455.75,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 2455.75,
+"days": 255,
+"status": "30+ overdue"
+},
+{
+"date": "2026-02-18",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 729.79,
+"desc": "FirstLight Home",
+"eob_cov": 729.79,
+"open": 0.0,
+"days": 257,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-02-13",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 2138.3,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 2138.3,
+"days": 262,
+"status": "30+ overdue"
+},
+{
+"date": "2026-02-10",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 831.65,
+"desc": "FirstLight Home",
+"eob_cov": 831.65,
+"open": 0.0,
+"days": 265,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-02-06",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 2296.83,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 2296.83,
+"days": 269,
+"status": "30+ overdue"
+},
+{
+"date": "2026-02-03",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 454.93,
+"desc": "FirstLight Home",
+"eob_cov": 454.93,
+"open": 0.0,
+"days": 272,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-01-30",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 1759.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 1759.0,
+"days": 276,
+"status": "30+ overdue"
+},
+{
+"date": "2026-01-27",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 1170.72,
+"desc": "FirstLight Home",
+"eob_cov": 1170.72,
+"open": 0.0,
+"days": 279,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-01-23",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 1640.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 1640.0,
+"days": 283,
+"status": "30+ overdue"
+},
+{
+"date": "2026-01-21",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 1193.09,
+"desc": "FirstLight Home",
+"eob_cov": 1193.09,
+"open": 0.0,
+"days": 285,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-01-16",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 1640.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 1640.0,
+"days": 290,
+"status": "30+ overdue"
+},
+{
+"date": "2026-01-13",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 1143.26,
+"desc": "FirstLight Home",
+"eob_cov": 1143.26,
+"open": 0.0,
+"days": 293,
+"status": "Covered by EOB"
+},
+{
+"date": "2026-01-09",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 2601.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 2601.0,
+"days": 297,
+"status": "30+ overdue"
+},
+{
+"date": "2026-01-06",
+"vendor": "FirstLight",
+"src": "Synovus 9306",
+"amount": 858.31,
+"desc": "FirstLight Home",
+"eob_cov": 858.31,
+"open": 0.0,
+"days": 300,
+"status": "Covered by EOB"
+}
+],
+"eobs": [
+{
+"eob": "EOB-24",
+"date": "2026-01-26",
+"amount": 1143.26,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-25",
+"date": "2026-02-02",
+"amount": 1171.09,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-26",
+"date": "2026-02-05",
+"amount": 1170.72,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-27",
+"date": "2026-02-19",
+"amount": 443.93,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-28",
+"date": "2026-02-25",
+"amount": 831.65,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-29",
+"date": "2026-03-02",
+"amount": 729.79,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-30",
+"date": "2026-03-05",
+"amount": 458.8,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-23",
+"date": "2026-03-18",
+"amount": 637.32,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-21",
+"date": "2026-03-26",
+"amount": 682.65,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-22",
+"date": "2026-03-26",
+"amount": 725.72,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-20",
+"date": "2026-04-01",
+"amount": 469.57,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-19",
+"date": "2026-04-07",
+"amount": 185.0,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-18",
+"date": "2026-04-22",
+"amount": 232.77,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-17",
+"date": "2026-04-28",
+"amount": 413.77,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-16",
+"date": "2026-05-04",
+"amount": 443.18,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-15",
+"date": "2026-05-14",
+"amount": 521.7,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-14",
+"date": "2026-05-21",
+"amount": 891.85,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-13",
+"date": "2026-05-28",
+"amount": 778.82,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-12",
+"date": "2026-06-12",
+"amount": 1782.48,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-11",
+"date": "2026-06-24",
+"amount": 296.15,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-4",
+"date": "2026-07-23",
+"amount": 2109.56,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-3",
+"date": "2026-07-31",
+"amount": 1974.55,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-2",
+"date": "2026-08-05",
+"amount": 1273.57,
+"vendor": "FirstLight"
+},
+{
+"eob": "EOB-5",
+"date": "2026-08-11",
+"amount": 3404.92,
+"vendor": "LifeWorx"
+},
+{
+"eob": "EOB-6",
+"date": "2026-08-11",
+"amount": 6040.66,
+"vendor": "LifeWorx"
+},
+{
+"eob": "EOB-7",
+"date": "2026-08-11",
+"amount": 1980.24,
+"vendor": "FirstLight"
+}
+],
+"summary": {
+"All": {
+"paid_n": 92,
+"paid": 127437.81,
+"eob_n": 26,
+"eob": 30793.72,
+"eob_last": "2026-08-11",
+"un_n": 69,
+"un": 96644.09,
+"od30_n": 59,
+"od30": 82728.69,
+"od2_n": 7,
+"od2": 11522.27,
+"in14_n": 3,
+"in14": 2393.13
+},
+"Home RN": {
+"paid_n": 43,
+"paid": 38948.75,
+"eob_n": 0,
+"eob": 0,
+"eob_last": null,
+"un_n": 43,
+"un": 38948.75,
+"od30_n": 39,
+"od30": 38398.75,
+"od2_n": 2,
+"od2": 250.0,
+"in14_n": 2,
+"in14": 300.0
+},
+"FirstLight": {
+"paid_n": 42,
+"paid": 54690.37,
+"eob_n": 24,
+"eob": 21348.14,
+"eob_last": "2026-08-11",
+"un_n": 19,
+"un": 33342.23,
+"od30_n": 15,
+"od30": 25113.46,
+"od2_n": 3,
+"od2": 6135.64,
+"in14_n": 1,
+"in14": 2093.13
+},
+"LifeWorx": {
+"paid_n": 6,
+"paid": 33476.95,
+"eob_n": 2,
+"eob": 9445.58,
+"eob_last": "2026-08-11",
+"un_n": 6,
+"un": 24031.37,
+"od30_n": 4,
+"od30": 18894.74,
+"od2_n": 2,
+"od2": 5136.63,
+"in14_n": 0,
+"in14": 0
+},
+"BrightStar": {
+"paid_n": 1,
+"paid": 321.74,
+"eob_n": 0,
+"eob": 0,
+"eob_last": null,
+"un_n": 1,
+"un": 321.74,
+"od30_n": 1,
+"od30": 321.74,
+"od2_n": 0,
+"od2": 0,
+"in14_n": 0,
+"in14": 0
+}
+}
+}
