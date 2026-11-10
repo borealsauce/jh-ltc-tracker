@@ -1,7 +1,40 @@
 {
-"as_of": "2026-11-02",
+"as_of": "2026-11-09",
 "eob_last": "2026-08-11",
 "payments": [
+{
+"date": "2026-11-06",
+"vendor": "Home RN",
+"src": "Synovus 9306",
+"amount": 75.0,
+"desc": "HomeRN Charlesto",
+"eob_cov": 0,
+"open": 75.0,
+"days": 3,
+"status": "Within 14 days"
+},
+{
+"date": "2026-11-04",
+"vendor": "LifeWorx",
+"src": "Finance Plaid \u20260452",
+"amount": 2400.45,
+"desc": "IN *LIFEWORX SOUTH CAR",
+"eob_cov": 0.0,
+"open": 2400.45,
+"days": 5,
+"status": "Within 14 days"
+},
+{
+"date": "2026-11-02",
+"vendor": "FirstLight",
+"src": "Finance Plaid \u20260452",
+"amount": 1713.39,
+"desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
+"eob_cov": 0.0,
+"open": 1713.39,
+"days": 7,
+"status": "Within 14 days"
+},
 {
 "date": "2026-10-30",
 "vendor": "Home RN",
@@ -10,7 +43,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 225.0,
-"days": 3,
+"days": 10,
 "status": "Within 14 days"
 },
 {
@@ -21,8 +54,8 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "eob_cov": 0.0,
 "open": 2093.13,
-"days": 7,
-"status": "Within 14 days"
+"days": 14,
+"status": "2\u20134 wks overdue"
 },
 {
 "date": "2026-10-23",
@@ -32,8 +65,8 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 75.0,
-"days": 10,
-"status": "Within 14 days"
+"days": 17,
+"status": "2\u20134 wks overdue"
 },
 {
 "date": "2026-10-19",
@@ -43,7 +76,7 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "eob_cov": 0.0,
 "open": 2008.66,
-"days": 14,
+"days": 21,
 "status": "2\u20134 wks overdue"
 },
 {
@@ -54,7 +87,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 175.0,
-"days": 17,
+"days": 24,
 "status": "2\u20134 wks overdue"
 },
 {
@@ -65,7 +98,7 @@
 "desc": "IN *LIFEWORX SOUTH CAR",
 "eob_cov": 0.0,
 "open": 4656.63,
-"days": 18,
+"days": 25,
 "status": "2\u20134 wks overdue"
 },
 {
@@ -76,7 +109,7 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "eob_cov": 0.0,
 "open": 2232.01,
-"days": 21,
+"days": 28,
 "status": "2\u20134 wks overdue"
 },
 {
@@ -87,8 +120,8 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 75.0,
-"days": 24,
-"status": "2\u20134 wks overdue"
+"days": 31,
+"status": "30+ overdue"
 },
 {
 "date": "2026-10-07",
@@ -98,8 +131,8 @@
 "desc": "IN *LIFEWORX SOUTH CAR",
 "eob_cov": 0.0,
 "open": 480.0,
-"days": 26,
-"status": "2\u20134 wks overdue"
+"days": 33,
+"status": "30+ overdue"
 },
 {
 "date": "2026-10-05",
@@ -109,8 +142,8 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "eob_cov": 0.0,
 "open": 1894.97,
-"days": 28,
-"status": "2\u20134 wks overdue"
+"days": 35,
+"status": "30+ overdue"
 },
 {
 "date": "2026-10-02",
@@ -120,7 +153,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 225.0,
-"days": 31,
+"days": 38,
 "status": "30+ overdue"
 },
 {
@@ -131,7 +164,7 @@
 "desc": "IN *LIFEWORX SOUTH CAR",
 "eob_cov": 0.0,
 "open": 579.0,
-"days": 34,
+"days": 41,
 "status": "30+ overdue"
 },
 {
@@ -142,7 +175,7 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "eob_cov": 0.0,
 "open": 2179.63,
-"days": 35,
+"days": 42,
 "status": "30+ overdue"
 },
 {
@@ -153,7 +186,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 75.0,
-"days": 38,
+"days": 45,
 "status": "30+ overdue"
 },
 {
@@ -164,7 +197,7 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "eob_cov": 0.0,
 "open": 2064.83,
-"days": 41,
+"days": 48,
 "status": "30+ overdue"
 },
 {
@@ -175,7 +208,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 175.0,
-"days": 45,
+"days": 52,
 "status": "30+ overdue"
 },
 {
@@ -186,7 +219,7 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "eob_cov": 0.0,
 "open": 1902.02,
-"days": 49,
+"days": 56,
 "status": "30+ overdue"
 },
 {
@@ -197,7 +230,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 75.0,
-"days": 52,
+"days": 59,
 "status": "30+ overdue"
 },
 {
@@ -208,7 +241,7 @@
 "desc": "IN *LIFEWORX SOUTH CAR",
 "eob_cov": 0.0,
 "open": 4273.33,
-"days": 55,
+"days": 62,
 "status": "30+ overdue"
 },
 {
@@ -219,7 +252,7 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "eob_cov": 0.0,
 "open": 1648.59,
-"days": 55,
+"days": 62,
 "status": "30+ overdue"
 },
 {
@@ -230,7 +263,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 175.0,
-"days": 59,
+"days": 66,
 "status": "30+ overdue"
 },
 {
@@ -241,7 +274,7 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "eob_cov": 0.0,
 "open": 1357.04,
-"days": 63,
+"days": 70,
 "status": "30+ overdue"
 },
 {
@@ -252,7 +285,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 75.0,
-"days": 66,
+"days": 73,
 "status": "30+ overdue"
 },
 {
@@ -263,7 +296,7 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "eob_cov": 0.0,
 "open": 2056.71,
-"days": 70,
+"days": 77,
 "status": "30+ overdue"
 },
 {
@@ -274,7 +307,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 175.0,
-"days": 73,
+"days": 80,
 "status": "30+ overdue"
 },
 {
@@ -285,7 +318,7 @@
 "desc": "FIRSTLIGHT HOME",
 "eob_cov": 0.0,
 "open": 1811.49,
-"days": 76,
+"days": 83,
 "status": "30+ overdue"
 },
 {
@@ -296,7 +329,7 @@
 "desc": "HOMERN CHARLESTO",
 "eob_cov": 0,
 "open": 75.0,
-"days": 80,
+"days": 87,
 "status": "30+ overdue"
 },
 {
@@ -307,7 +340,7 @@
 "desc": "FIRSTLIGHT HOME",
 "eob_cov": 0.0,
 "open": 2098.24,
-"days": 83,
+"days": 90,
 "status": "30+ overdue"
 },
 {
@@ -318,7 +351,7 @@
 "desc": "HOMERN CHARLESTO",
 "eob_cov": 0,
 "open": 175.0,
-"days": 87,
+"days": 94,
 "status": "30+ overdue"
 },
 {
@@ -329,7 +362,7 @@
 "desc": "IN *LIFEWORX SOUTH CAR",
 "eob_cov": 0.0,
 "open": 6147.33,
-"days": 87,
+"days": 94,
 "status": "30+ overdue"
 },
 {
@@ -340,7 +373,7 @@
 "desc": "FIRSTLIGHT HOME",
 "eob_cov": 0.0,
 "open": 1108.3,
-"days": 90,
+"days": 97,
 "status": "30+ overdue"
 },
 {
@@ -351,7 +384,7 @@
 "desc": "BrightStar Care of Cha MOUNT PLEASAN",
 "eob_cov": 0,
 "open": 321.74,
-"days": 90,
+"days": 97,
 "status": "30+ overdue"
 },
 {
@@ -362,7 +395,7 @@
 "desc": "HOMERN CHARLESTO",
 "eob_cov": 0,
 "open": 86.96,
-"days": 94,
+"days": 101,
 "status": "30+ overdue"
 },
 {
@@ -373,7 +406,7 @@
 "desc": "FIRSTLIGHT HOME",
 "eob_cov": 0.0,
 "open": 1980.24,
-"days": 97,
+"days": 104,
 "status": "30+ overdue"
 },
 {
@@ -384,7 +417,7 @@
 "desc": "HOMERN CHARLESTO",
 "eob_cov": 0,
 "open": 175.0,
-"days": 101,
+"days": 108,
 "status": "30+ overdue"
 },
 {
@@ -395,7 +428,7 @@
 "desc": "FIRSTLIGHT HOME",
 "eob_cov": 0.0,
 "open": 1284.57,
-"days": 104,
+"days": 111,
 "status": "30+ overdue"
 },
 {
@@ -406,7 +439,7 @@
 "desc": "HOMERN CHARLESTO",
 "eob_cov": 0,
 "open": 75.0,
-"days": 108,
+"days": 115,
 "status": "30+ overdue"
 },
 {
@@ -417,7 +450,7 @@
 "desc": "FIRSTLIGHT HOME",
 "eob_cov": 0.0,
 "open": 1977.3,
-"days": 111,
+"days": 118,
 "status": "30+ overdue"
 },
 {
@@ -428,7 +461,7 @@
 "desc": "HOMERN CHARLESTO",
 "eob_cov": 0,
 "open": 175.0,
-"days": 115,
+"days": 122,
 "status": "30+ overdue"
 },
 {
@@ -439,7 +472,7 @@
 "desc": "FIRSTLIGHT HOME",
 "eob_cov": 0.0,
 "open": 2109.56,
-"days": 118,
+"days": 125,
 "status": "30+ overdue"
 },
 {
@@ -450,7 +483,7 @@
 "desc": "IN *LIFEWORX SOUTH CAR",
 "eob_cov": 9445.58,
 "open": 7895.08,
-"days": 118,
+"days": 125,
 "status": "30+ overdue"
 },
 {
@@ -461,7 +494,7 @@
 "desc": "HOMERN CHARLESTO",
 "eob_cov": 0,
 "open": 75.0,
-"days": 122,
+"days": 129,
 "status": "30+ overdue"
 },
 {
@@ -472,7 +505,7 @@
 "desc": "FIRSTLIGHT HOME",
 "eob_cov": 0.0,
 "open": 1255.01,
-"days": 125,
+"days": 132,
 "status": "30+ overdue"
 },
 {
@@ -483,7 +516,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 175.0,
-"days": 129,
+"days": 136,
 "status": "30+ overdue"
 },
 {
@@ -494,7 +527,7 @@
 "desc": "FIRSTLIGHT HOME",
 "eob_cov": 1516.53,
 "open": 279.93,
-"days": 132,
+"days": 139,
 "status": "30+ overdue"
 },
 {
@@ -505,7 +538,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 175.0,
-"days": 133,
+"days": 140,
 "status": "30+ overdue"
 },
 {
@@ -516,7 +549,7 @@
 "desc": "FIRSTLIGHT HOME",
 "eob_cov": 2002.22,
 "open": 0.0,
-"days": 139,
+"days": 146,
 "status": "Covered by EOB"
 },
 {
@@ -527,7 +560,7 @@
 "desc": "HOMERN CHARLESTO",
 "eob_cov": 0,
 "open": 175.0,
-"days": 143,
+"days": 150,
 "status": "30+ overdue"
 },
 {
@@ -538,7 +571,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 1546.49,
 "open": 0.0,
-"days": 146,
+"days": 153,
 "status": "Covered by EOB"
 },
 {
@@ -549,7 +582,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 175.0,
-"days": 150,
+"days": 157,
 "status": "30+ overdue"
 },
 {
@@ -560,7 +593,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 1805.36,
 "open": 0.0,
-"days": 153,
+"days": 160,
 "status": "Covered by EOB"
 },
 {
@@ -571,7 +604,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 175.0,
-"days": 157,
+"days": 164,
 "status": "30+ overdue"
 },
 {
@@ -582,7 +615,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 1629.34,
 "open": 0.0,
-"days": 159,
+"days": 166,
 "status": "Covered by EOB"
 },
 {
@@ -593,7 +626,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 175.0,
-"days": 164,
+"days": 171,
 "status": "30+ overdue"
 },
 {
@@ -604,7 +637,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 778.82,
 "open": 0.0,
-"days": 167,
+"days": 174,
 "status": "Covered by EOB"
 },
 {
@@ -615,7 +648,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 175.0,
-"days": 171,
+"days": 178,
 "status": "30+ overdue"
 },
 {
@@ -626,7 +659,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 891.85,
 "open": 0.0,
-"days": 174,
+"days": 181,
 "status": "Covered by EOB"
 },
 {
@@ -637,7 +670,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 1333.0,
-"days": 178,
+"days": 185,
 "status": "30+ overdue"
 },
 {
@@ -648,7 +681,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 521.7,
 "open": 0.0,
-"days": 181,
+"days": 188,
 "status": "Covered by EOB"
 },
 {
@@ -659,7 +692,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 1391.0,
-"days": 185,
+"days": 192,
 "status": "30+ overdue"
 },
 {
@@ -670,7 +703,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 443.18,
 "open": 0.0,
-"days": 188,
+"days": 195,
 "status": "Covered by EOB"
 },
 {
@@ -681,7 +714,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 1664.8,
-"days": 192,
+"days": 199,
 "status": "30+ overdue"
 },
 {
@@ -692,7 +725,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 413.77,
 "open": 0.0,
-"days": 195,
+"days": 202,
 "status": "Covered by EOB"
 },
 {
@@ -703,7 +736,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 1744.2,
-"days": 199,
+"days": 206,
 "status": "30+ overdue"
 },
 {
@@ -714,7 +747,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 232.77,
 "open": 0.0,
-"days": 202,
+"days": 209,
 "status": "Covered by EOB"
 },
 {
@@ -725,7 +758,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 1786.0,
-"days": 206,
+"days": 213,
 "status": "30+ overdue"
 },
 {
@@ -736,7 +769,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 1792.38,
-"days": 213,
+"days": 220,
 "status": "30+ overdue"
 },
 {
@@ -747,7 +780,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 185.0,
 "open": 0.0,
-"days": 216,
+"days": 223,
 "status": "Covered by EOB"
 },
 {
@@ -758,7 +791,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 2094.17,
-"days": 220,
+"days": 227,
 "status": "30+ overdue"
 },
 {
@@ -769,7 +802,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 469.57,
 "open": 0.0,
-"days": 223,
+"days": 230,
 "status": "Covered by EOB"
 },
 {
@@ -780,7 +813,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 2233.63,
-"days": 227,
+"days": 234,
 "status": "30+ overdue"
 },
 {
@@ -791,7 +824,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 751.02,
 "open": 0.0,
-"days": 230,
+"days": 237,
 "status": "Covered by EOB"
 },
 {
@@ -802,7 +835,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 2106.5,
-"days": 234,
+"days": 241,
 "status": "30+ overdue"
 },
 {
@@ -813,7 +846,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 682.65,
 "open": 0.0,
-"days": 237,
+"days": 244,
 "status": "Covered by EOB"
 },
 {
@@ -824,7 +857,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 2188.23,
-"days": 241,
+"days": 248,
 "status": "30+ overdue"
 },
 {
@@ -835,7 +868,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 637.32,
 "open": 0.0,
-"days": 244,
+"days": 251,
 "status": "Covered by EOB"
 },
 {
@@ -846,7 +879,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 2497.0,
-"days": 248,
+"days": 255,
 "status": "30+ overdue"
 },
 {
@@ -857,7 +890,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 458.8,
 "open": 0.0,
-"days": 251,
+"days": 258,
 "status": "Covered by EOB"
 },
 {
@@ -868,7 +901,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 2455.75,
-"days": 255,
+"days": 262,
 "status": "30+ overdue"
 },
 {
@@ -879,7 +912,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 729.79,
 "open": 0.0,
-"days": 257,
+"days": 264,
 "status": "Covered by EOB"
 },
 {
@@ -890,7 +923,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 2138.3,
-"days": 262,
+"days": 269,
 "status": "30+ overdue"
 },
 {
@@ -901,7 +934,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 831.65,
 "open": 0.0,
-"days": 265,
+"days": 272,
 "status": "Covered by EOB"
 },
 {
@@ -912,7 +945,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 2296.83,
-"days": 269,
+"days": 276,
 "status": "30+ overdue"
 },
 {
@@ -923,7 +956,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 454.93,
 "open": 0.0,
-"days": 272,
+"days": 279,
 "status": "Covered by EOB"
 },
 {
@@ -934,7 +967,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 1759.0,
-"days": 276,
+"days": 283,
 "status": "30+ overdue"
 },
 {
@@ -945,7 +978,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 1170.72,
 "open": 0.0,
-"days": 279,
+"days": 286,
 "status": "Covered by EOB"
 },
 {
@@ -956,7 +989,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 1640.0,
-"days": 283,
+"days": 290,
 "status": "30+ overdue"
 },
 {
@@ -967,7 +1000,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 1193.09,
 "open": 0.0,
-"days": 285,
+"days": 292,
 "status": "Covered by EOB"
 },
 {
@@ -978,7 +1011,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 1640.0,
-"days": 290,
+"days": 297,
 "status": "30+ overdue"
 },
 {
@@ -989,7 +1022,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 1143.26,
 "open": 0.0,
-"days": 293,
+"days": 300,
 "status": "Covered by EOB"
 },
 {
@@ -1000,7 +1033,7 @@
 "desc": "HomeRN Charlesto",
 "eob_cov": 0,
 "open": 2601.0,
-"days": 297,
+"days": 304,
 "status": "30+ overdue"
 },
 {
@@ -1011,7 +1044,7 @@
 "desc": "FirstLight Home",
 "eob_cov": 858.31,
 "open": 0.0,
-"days": 300,
+"days": 307,
 "status": "Covered by EOB"
 }
 ],
@@ -1173,66 +1206,448 @@
 "vendor": "FirstLight"
 }
 ],
+"deps": [
+{
+"date": "2026-11-09",
+"amount": 2014.56,
+"pending": true,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-11-09",
+"amount": 1933.26,
+"pending": true,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-11-09",
+"amount": 75.0,
+"pending": true,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-11-09",
+"amount": 24972.36,
+"pending": true,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-11-09",
+"amount": 175.0,
+"pending": true,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-11-06",
+"amount": 3509.65,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-11-04",
+"amount": 2120.51,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-11-02",
+"amount": 75.0,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-10-28",
+"amount": 1819.44,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-10-15",
+"amount": 225.0,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-10-15",
+"amount": 2097.82,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-10-14",
+"amount": 75.0,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-10-05",
+"amount": 1824.03,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-10-05",
+"amount": 1947.72,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-09-16",
+"amount": 1583.41,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-09-16",
+"amount": 1292.9,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-09-14",
+"amount": 1979.51,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-09-10",
+"amount": 2084.59,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-09-08",
+"amount": 1804.89,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-08-31",
+"amount": 2098.24,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-08-26",
+"amount": 312.36,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-08-24",
+"amount": 1108.3,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-08-13",
+"amount": 3404.92,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-08-13",
+"amount": 6040.66,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-08-13",
+"amount": 1980.24,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-08-07",
+"amount": 1273.57,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-08-06",
+"amount": 6280.0,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-08-03",
+"amount": 1974.55,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-07-27",
+"amount": 2109.56,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-07-15",
+"amount": 1250.94,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-07-09",
+"amount": 1731.34,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-07-01",
+"amount": 2002.22,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-06-26",
+"amount": 296.15,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-06-15",
+"amount": 1782.48,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-06-01",
+"amount": 778.82,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-05-26",
+"amount": 891.85,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-05-18",
+"amount": 521.7,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-05-06",
+"amount": 443.18,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-04-30",
+"amount": 413.77,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-04-24",
+"amount": 232.77,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-04-09",
+"amount": 185.0,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-04-03",
+"amount": 469.57,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-03-30",
+"amount": 725.72,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-03-30",
+"amount": 682.65,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-03-20",
+"amount": 637.32,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-03-09",
+"amount": 458.8,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-03-04",
+"amount": 729.79,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-02-27",
+"amount": 831.65,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-02-23",
+"amount": 443.93,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-02-09",
+"amount": 1170.72,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-02-04",
+"amount": 1171.09,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-01-28",
+"amount": 1143.26,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-01-22",
+"amount": 858.31,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-01-12",
+"amount": 1573.42,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-01-07",
+"amount": 673.92,
+"pending": false,
+"desc": "John Hancock Financial"
+},
+{
+"date": "2026-01-02",
+"amount": 1280.8,
+"pending": false,
+"desc": "John Hancock Financial"
+}
+],
 "summary": {
 "All": {
-"paid_n": 92,
-"paid": 127437.81,
+"paid_n": 95,
+"paid": 131626.65,
 "eob_n": 26,
 "eob": 30793.72,
 "eob_last": "2026-08-11",
-"un_n": 69,
-"un": 96644.09,
-"od30_n": 59,
-"od30": 82728.69,
-"od2_n": 7,
-"od2": 11522.27,
-"in14_n": 3,
-"in14": 2393.13
+"un_n": 72,
+"un": 100832.93,
+"od30_n": 62,
+"od30": 85178.66,
+"od2_n": 6,
+"od2": 11240.43,
+"in14_n": 4,
+"in14": 4413.84,
+"jh_in": 101573.22,
+"jh_posted": 72403.04,
+"jh_pending": 29170.18,
+"jh_n": 56,
+"jh_pending_n": 5,
+"gap_vs_paid": 30053.43,
+"plan": 9867,
+"months": 11,
+"cap": 108537,
+"eligible": 6963.78,
+"all_paid": 131626.65
 },
 "Home RN": {
-"paid_n": 43,
-"paid": 38948.75,
+"paid_n": 44,
+"paid": 39023.75,
 "eob_n": 0,
 "eob": 0,
 "eob_last": null,
-"un_n": 43,
-"un": 38948.75,
-"od30_n": 39,
-"od30": 38398.75,
+"un_n": 44,
+"un": 39023.75,
+"od30_n": 40,
+"od30": 38473.75,
 "od2_n": 2,
 "od2": 250.0,
 "in14_n": 2,
-"in14": 300.0
+"in14": 300.0,
+"jh_in": 101573.22,
+"jh_posted": 72403.04,
+"jh_pending": 29170.18,
+"jh_n": 56,
+"jh_pending_n": 5,
+"gap_vs_paid": 30053.43,
+"plan": 9867,
+"months": 11,
+"cap": 108537,
+"eligible": 6963.78,
+"all_paid": 131626.65
 },
 "FirstLight": {
-"paid_n": 42,
-"paid": 54690.37,
+"paid_n": 43,
+"paid": 56403.76,
 "eob_n": 24,
 "eob": 21348.14,
 "eob_last": "2026-08-11",
-"un_n": 19,
-"un": 33342.23,
-"od30_n": 15,
-"od30": 25113.46,
+"un_n": 20,
+"un": 35055.62,
+"od30_n": 16,
+"od30": 27008.43,
 "od2_n": 3,
-"od2": 6135.64,
+"od2": 6333.8,
 "in14_n": 1,
-"in14": 2093.13
+"in14": 1713.39,
+"jh_in": 101573.22,
+"jh_posted": 72403.04,
+"jh_pending": 29170.18,
+"jh_n": 56,
+"jh_pending_n": 5,
+"gap_vs_paid": 30053.43,
+"plan": 9867,
+"months": 11,
+"cap": 108537,
+"eligible": 6963.78,
+"all_paid": 131626.65
 },
 "LifeWorx": {
-"paid_n": 6,
-"paid": 33476.95,
+"paid_n": 7,
+"paid": 35877.4,
 "eob_n": 2,
 "eob": 9445.58,
 "eob_last": "2026-08-11",
-"un_n": 6,
-"un": 24031.37,
-"od30_n": 4,
-"od30": 18894.74,
-"od2_n": 2,
-"od2": 5136.63,
-"in14_n": 0,
-"in14": 0
+"un_n": 7,
+"un": 26431.82,
+"od30_n": 5,
+"od30": 19374.74,
+"od2_n": 1,
+"od2": 4656.63,
+"in14_n": 1,
+"in14": 2400.45,
+"jh_in": 101573.22,
+"jh_posted": 72403.04,
+"jh_pending": 29170.18,
+"jh_n": 56,
+"jh_pending_n": 5,
+"gap_vs_paid": 30053.43,
+"plan": 9867,
+"months": 11,
+"cap": 108537,
+"eligible": 6963.78,
+"all_paid": 131626.65
 },
 "BrightStar": {
 "paid_n": 1,
@@ -1247,7 +1662,18 @@
 "od2_n": 0,
 "od2": 0,
 "in14_n": 0,
-"in14": 0
+"in14": 0,
+"jh_in": 101573.22,
+"jh_posted": 72403.04,
+"jh_pending": 29170.18,
+"jh_n": 56,
+"jh_pending_n": 5,
+"gap_vs_paid": 30053.43,
+"plan": 9867,
+"months": 11,
+"cap": 108537,
+"eligible": 6963.78,
+"all_paid": 131626.65
 }
 }
 }

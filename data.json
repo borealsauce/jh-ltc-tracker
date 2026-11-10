@@ -1,10 +1,10 @@
 {
-"generated": "2026-11-03 08:41 AM PT",
-"asof": "2026-11-03",
+"generated": "2026-11-09 04:09 PM PT",
+"asof": "2026-11-09",
 "range": {
 "synovus": [
 "2025-09-09",
-"2026-11-02"
+"2026-11-09"
 ],
 "citi": [
 "2025-12-05",
@@ -12,67 +12,67 @@
 ]
 },
 "sum": {
-"jh": 95905.51,
+"jh": 101573.22,
 "care": 174464.39,
-"gap": -78558.88,
-"matched": 37537.83,
-"owed": 36481.98,
-"unmatched_amt": 136926.56,
+"gap": -72891.17,
+"matched": 23226.94,
+"owed": 30814.27,
+"unmatched_amt": 151237.45,
 "expected": 132387.49,
-"owed_n": 89,
+"owed_n": 93,
 "tiers": {
 "within 14 days": {
-"amt": 2393.13,
-"n": 3
+"amt": 225.0,
+"n": 1
 },
 "2 wks overdue": {
-"amt": 11447.27,
-"n": 6
+"amt": 10990.43,
+"n": 4
 },
 "30+ overdue": {
-"amt": 123086.16,
-"n": 80
+"amt": 140022.02,
+"n": 88
 }
 },
-"jh_unmatched": 58367.68,
-"ins_total": 1213834.05
+"jh_unmatched": 78346.28,
+"ins_total": 1219501.76
 },
 "by_month": [
 {
 "month": "2025-09",
-"jh": 3874.71,
+"jh": 0,
 "care": 11060.45,
-"net": -7185.74,
+"net": -11060.45,
 "over": 1193.45,
 "exp": 9867,
-"gap": 5992.29
+"gap": 9867
 },
 {
 "month": "2025-10",
-"jh": 10648.5,
+"jh": 0,
 "care": 10637.96,
-"net": 10.54,
+"net": -10637.96,
 "over": 770.96,
 "exp": 9867,
-"gap": -781.5
+"gap": 9867
 },
 {
 "month": "2025-11",
-"jh": 6560.29,
+"jh": 0,
 "care": 9464.14,
-"net": -2903.85,
+"net": -9464.14,
 "over": 0,
 "exp": 9464.14,
-"gap": 2903.85
+"gap": 9464.14
 },
 {
 "month": "2025-12",
-"jh": 8049.13,
+"jh": 0,
 "care": 15864.03,
-"net": -7814.9,
+"net": -15864.03,
 "over": 5997.03,
 "exp": 9867,
-"gap": 1817.87
+"gap": 9867
 },
 {
 "month": "2026-01",
@@ -166,12 +166,12 @@
 },
 {
 "month": "2026-11",
-"jh": 75.0,
+"jh": 34875.34,
 "care": 0,
-"net": 75.0,
+"net": 34875.34,
 "over": 0,
 "exp": 0,
-"gap": -75.0
+"gap": -34875.34
 }
 ],
 "by_vendor": [
@@ -187,19 +187,19 @@
 {
 "vendor": "FirstLight Home Care",
 "paid": 91258.95,
-"reimb": 37162.83,
-"owed": 54096.12,
+"reimb": 22601.94,
+"owed": 68657.01,
 "n": 59,
-"od2": 6135.64,
-"od30": 45867.35
+"od2": 6333.8,
+"od30": 62323.21
 },
 {
 "vendor": "Home RN",
 "paid": 49406.75,
-"reimb": 375.0,
-"owed": 49031.75,
+"reimb": 625.0,
+"owed": 48781.75,
 "n": 55,
-"od2": 175.0,
+"od2": 0,
 "od30": 48556.75
 },
 {
@@ -208,8 +208,8 @@
 "reimb": 0,
 "owed": 33476.95,
 "n": 6,
-"od2": 5136.63,
-"od30": 28340.32
+"od2": 4656.63,
+"od30": 28820.32
 }
 ],
 "unmatched": [
@@ -221,7 +221,29 @@
 "desc": "BrightStar Care of Cha MOUNT PLEASAN",
 "pending": false,
 "match": null,
-"days": 91,
+"days": 97,
+"tier": "30+ overdue"
+},
+{
+"date": "2025-09-09",
+"vendor": "FirstLight Home Care",
+"src": "Synovus checking",
+"amount": 3079.99,
+"desc": "FirstLight Home",
+"pending": false,
+"match": null,
+"days": 426,
+"tier": "30+ overdue"
+},
+{
+"date": "2025-09-16",
+"vendor": "FirstLight Home Care",
+"src": "Synovus checking",
+"amount": 2623.35,
+"desc": "FirstLight Home",
+"pending": false,
+"match": null,
+"days": 419,
 "tier": "30+ overdue"
 },
 {
@@ -232,7 +254,7 @@
 "desc": "FirstLight Home",
 "pending": false,
 "match": null,
-"days": 406,
+"days": 412,
 "tier": "30+ overdue"
 },
 {
@@ -243,7 +265,7 @@
 "desc": "FirstLight Home",
 "pending": false,
 "match": null,
-"days": 399,
+"days": 405,
 "tier": "30+ overdue"
 },
 {
@@ -254,7 +276,7 @@
 "desc": "FirstLight Home",
 "pending": false,
 "match": null,
-"days": 392,
+"days": 398,
 "tier": "30+ overdue"
 },
 {
@@ -265,7 +287,29 @@
 "desc": "FirstLight Home",
 "pending": false,
 "match": null,
+"days": 390,
+"tier": "30+ overdue"
+},
+{
+"date": "2025-10-21",
+"vendor": "FirstLight Home Care",
+"src": "Synovus checking",
+"amount": 2610.54,
+"desc": "FirstLight Home",
+"pending": false,
+"match": null,
 "days": 384,
+"tier": "30+ overdue"
+},
+{
+"date": "2025-10-28",
+"vendor": "FirstLight Home Care",
+"src": "Synovus checking",
+"amount": 2239.13,
+"desc": "FirstLight Home",
+"pending": false,
+"match": null,
+"days": 377,
 "tier": "30+ overdue"
 },
 {
@@ -276,7 +320,7 @@
 "desc": "FirstLight Home",
 "pending": false,
 "match": null,
-"days": 364,
+"days": 370,
 "tier": "30+ overdue"
 },
 {
@@ -287,7 +331,29 @@
 "desc": "FirstLight Home",
 "pending": false,
 "match": null,
+"days": 362,
+"tier": "30+ overdue"
+},
+{
+"date": "2025-11-18",
+"vendor": "FirstLight Home Care",
+"src": "Synovus checking",
+"amount": 2255.26,
+"desc": "FirstLight Home",
+"pending": false,
+"match": null,
 "days": 356,
+"tier": "30+ overdue"
+},
+{
+"date": "2025-11-25",
+"vendor": "FirstLight Home Care",
+"src": "Synovus checking",
+"amount": 1752.62,
+"desc": "FirstLight Home",
+"pending": false,
+"match": null,
+"days": 349,
 "tier": "30+ overdue"
 },
 {
@@ -298,7 +364,7 @@
 "desc": "FirstLight Home",
 "pending": false,
 "match": null,
-"days": 336,
+"days": 342,
 "tier": "30+ overdue"
 },
 {
@@ -309,7 +375,7 @@
 "desc": "FirstLight Home",
 "pending": false,
 "match": null,
-"days": 329,
+"days": 335,
 "tier": "30+ overdue"
 },
 {
@@ -320,7 +386,7 @@
 "desc": "FirstLight Home",
 "pending": false,
 "match": null,
-"days": 315,
+"days": 321,
 "tier": "30+ overdue"
 },
 {
@@ -331,7 +397,7 @@
 "desc": "FirstLight Home",
 "pending": false,
 "match": null,
-"days": 286,
+"days": 292,
 "tier": "30+ overdue"
 },
 {
@@ -342,7 +408,7 @@
 "desc": "FirstLight Home",
 "pending": false,
 "match": null,
-"days": 273,
+"days": 279,
 "tier": "30+ overdue"
 },
 {
@@ -353,7 +419,7 @@
 "desc": "FirstLight Home",
 "pending": false,
 "match": null,
-"days": 231,
+"days": 237,
 "tier": "30+ overdue"
 },
 {
@@ -364,7 +430,7 @@
 "desc": "FirstLight Home",
 "pending": false,
 "match": null,
-"days": 160,
+"days": 166,
 "tier": "30+ overdue"
 },
 {
@@ -375,7 +441,7 @@
 "desc": "FirstLight Home",
 "pending": false,
 "match": null,
-"days": 154,
+"days": 160,
 "tier": "30+ overdue"
 },
 {
@@ -386,7 +452,7 @@
 "desc": "FirstLight Home",
 "pending": false,
 "match": null,
-"days": 147,
+"days": 153,
 "tier": "30+ overdue"
 },
 {
@@ -397,7 +463,7 @@
 "desc": "FIRSTLIGHT HOME",
 "pending": false,
 "match": null,
-"days": 133,
+"days": 139,
 "tier": "30+ overdue"
 },
 {
@@ -408,7 +474,7 @@
 "desc": "FIRSTLIGHT HOME",
 "pending": false,
 "match": null,
-"days": 126,
+"days": 132,
 "tier": "30+ overdue"
 },
 {
@@ -419,7 +485,7 @@
 "desc": "FIRSTLIGHT HOME",
 "pending": false,
 "match": null,
-"days": 112,
+"days": 118,
 "tier": "30+ overdue"
 },
 {
@@ -430,7 +496,7 @@
 "desc": "FIRSTLIGHT HOME",
 "pending": false,
 "match": null,
-"days": 105,
+"days": 111,
 "tier": "30+ overdue"
 },
 {
@@ -441,7 +507,7 @@
 "desc": "FIRSTLIGHT HOME",
 "pending": false,
 "match": null,
-"days": 77,
+"days": 83,
 "tier": "30+ overdue"
 },
 {
@@ -452,7 +518,7 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "pending": false,
 "match": null,
-"days": 71,
+"days": 77,
 "tier": "30+ overdue"
 },
 {
@@ -463,7 +529,7 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "pending": false,
 "match": null,
-"days": 64,
+"days": 70,
 "tier": "30+ overdue"
 },
 {
@@ -474,7 +540,7 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "pending": false,
 "match": null,
-"days": 56,
+"days": 62,
 "tier": "30+ overdue"
 },
 {
@@ -485,7 +551,7 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "pending": false,
 "match": null,
-"days": 50,
+"days": 56,
 "tier": "30+ overdue"
 },
 {
@@ -496,7 +562,7 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "pending": false,
 "match": null,
-"days": 42,
+"days": 48,
 "tier": "30+ overdue"
 },
 {
@@ -507,7 +573,7 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "pending": false,
 "match": null,
-"days": 36,
+"days": 42,
 "tier": "30+ overdue"
 },
 {
@@ -518,8 +584,8 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "pending": false,
 "match": null,
-"days": 29,
-"tier": "2 wks overdue"
+"days": 35,
+"tier": "30+ overdue"
 },
 {
 "date": "2026-10-12",
@@ -529,7 +595,7 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "pending": false,
 "match": null,
-"days": 22,
+"days": 28,
 "tier": "2 wks overdue"
 },
 {
@@ -540,7 +606,7 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "pending": false,
 "match": null,
-"days": 15,
+"days": 21,
 "tier": "2 wks overdue"
 },
 {
@@ -551,8 +617,8 @@
 "desc": "FIRSTLIGHT HOME CARE - MURRELLS INLE",
 "pending": false,
 "match": null,
-"days": 8,
-"tier": "within 14 days"
+"days": 14,
+"tier": "2 wks overdue"
 },
 {
 "date": "2025-10-10",
@@ -562,7 +628,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 389,
+"days": 395,
 "tier": "30+ overdue"
 },
 {
@@ -573,7 +639,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 382,
+"days": 388,
 "tier": "30+ overdue"
 },
 {
@@ -584,7 +650,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 368,
+"days": 374,
 "tier": "30+ overdue"
 },
 {
@@ -595,7 +661,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 361,
+"days": 367,
 "tier": "30+ overdue"
 },
 {
@@ -606,7 +672,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 354,
+"days": 360,
 "tier": "30+ overdue"
 },
 {
@@ -617,7 +683,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 347,
+"days": 353,
 "tier": "30+ overdue"
 },
 {
@@ -628,7 +694,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 337,
+"days": 343,
 "tier": "30+ overdue"
 },
 {
@@ -639,7 +705,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 333,
+"days": 339,
 "tier": "30+ overdue"
 },
 {
@@ -650,7 +716,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 326,
+"days": 332,
 "tier": "30+ overdue"
 },
 {
@@ -661,7 +727,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 319,
+"days": 325,
 "tier": "30+ overdue"
 },
 {
@@ -672,7 +738,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 309,
+"days": 315,
 "tier": "30+ overdue"
 },
 {
@@ -683,7 +749,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 308,
+"days": 314,
 "tier": "30+ overdue"
 },
 {
@@ -694,7 +760,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 298,
+"days": 304,
 "tier": "30+ overdue"
 },
 {
@@ -705,7 +771,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 291,
+"days": 297,
 "tier": "30+ overdue"
 },
 {
@@ -716,7 +782,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 284,
+"days": 290,
 "tier": "30+ overdue"
 },
 {
@@ -727,7 +793,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 277,
+"days": 283,
 "tier": "30+ overdue"
 },
 {
@@ -738,7 +804,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 270,
+"days": 276,
 "tier": "30+ overdue"
 },
 {
@@ -749,7 +815,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 263,
+"days": 269,
 "tier": "30+ overdue"
 },
 {
@@ -760,7 +826,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 256,
+"days": 262,
 "tier": "30+ overdue"
 },
 {
@@ -771,7 +837,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 249,
+"days": 255,
 "tier": "30+ overdue"
 },
 {
@@ -782,7 +848,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 242,
+"days": 248,
 "tier": "30+ overdue"
 },
 {
@@ -793,7 +859,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 235,
+"days": 241,
 "tier": "30+ overdue"
 },
 {
@@ -804,7 +870,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 228,
+"days": 234,
 "tier": "30+ overdue"
 },
 {
@@ -815,7 +881,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 221,
+"days": 227,
 "tier": "30+ overdue"
 },
 {
@@ -826,7 +892,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 214,
+"days": 220,
 "tier": "30+ overdue"
 },
 {
@@ -837,7 +903,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 207,
+"days": 213,
 "tier": "30+ overdue"
 },
 {
@@ -848,7 +914,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 200,
+"days": 206,
 "tier": "30+ overdue"
 },
 {
@@ -859,7 +925,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 193,
+"days": 199,
 "tier": "30+ overdue"
 },
 {
@@ -870,7 +936,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 186,
+"days": 192,
 "tier": "30+ overdue"
 },
 {
@@ -881,7 +947,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 179,
+"days": 185,
 "tier": "30+ overdue"
 },
 {
@@ -892,7 +958,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 172,
+"days": 178,
 "tier": "30+ overdue"
 },
 {
@@ -903,7 +969,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 165,
+"days": 171,
 "tier": "30+ overdue"
 },
 {
@@ -914,7 +980,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 158,
+"days": 164,
 "tier": "30+ overdue"
 },
 {
@@ -925,7 +991,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 151,
+"days": 157,
 "tier": "30+ overdue"
 },
 {
@@ -936,7 +1002,7 @@
 "desc": "HOMERN CHARLESTO",
 "pending": false,
 "match": null,
-"days": 144,
+"days": 150,
 "tier": "30+ overdue"
 },
 {
@@ -947,7 +1013,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 134,
+"days": 140,
 "tier": "30+ overdue"
 },
 {
@@ -958,7 +1024,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 130,
+"days": 136,
 "tier": "30+ overdue"
 },
 {
@@ -969,7 +1035,7 @@
 "desc": "HOMERN CHARLESTO",
 "pending": false,
 "match": null,
-"days": 123,
+"days": 129,
 "tier": "30+ overdue"
 },
 {
@@ -980,7 +1046,7 @@
 "desc": "HOMERN CHARLESTO",
 "pending": false,
 "match": null,
-"days": 116,
+"days": 122,
 "tier": "30+ overdue"
 },
 {
@@ -991,7 +1057,7 @@
 "desc": "HOMERN CHARLESTO",
 "pending": false,
 "match": null,
-"days": 109,
+"days": 115,
 "tier": "30+ overdue"
 },
 {
@@ -1002,7 +1068,7 @@
 "desc": "HOMERN CHARLESTO",
 "pending": false,
 "match": null,
-"days": 102,
+"days": 108,
 "tier": "30+ overdue"
 },
 {
@@ -1013,7 +1079,7 @@
 "desc": "HOMERN CHARLESTO",
 "pending": false,
 "match": null,
-"days": 95,
+"days": 101,
 "tier": "30+ overdue"
 },
 {
@@ -1024,7 +1090,7 @@
 "desc": "HOMERN CHARLESTO",
 "pending": false,
 "match": null,
-"days": 88,
+"days": 94,
 "tier": "30+ overdue"
 },
 {
@@ -1035,7 +1101,7 @@
 "desc": "HOMERN CHARLESTO",
 "pending": false,
 "match": null,
-"days": 81,
+"days": 87,
 "tier": "30+ overdue"
 },
 {
@@ -1046,7 +1112,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 74,
+"days": 80,
 "tier": "30+ overdue"
 },
 {
@@ -1057,7 +1123,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 67,
+"days": 73,
 "tier": "30+ overdue"
 },
 {
@@ -1068,7 +1134,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 60,
+"days": 66,
 "tier": "30+ overdue"
 },
 {
@@ -1079,7 +1145,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 46,
+"days": 52,
 "tier": "30+ overdue"
 },
 {
@@ -1090,30 +1156,8 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 39,
+"days": 45,
 "tier": "30+ overdue"
-},
-{
-"date": "2026-10-16",
-"vendor": "Home RN",
-"src": "Synovus checking",
-"amount": 175.0,
-"desc": "HomeRN Charlesto",
-"pending": false,
-"match": null,
-"days": 18,
-"tier": "2 wks overdue"
-},
-{
-"date": "2026-10-23",
-"vendor": "Home RN",
-"src": "Synovus checking",
-"amount": 75.0,
-"desc": "HomeRN Charlesto",
-"pending": false,
-"match": null,
-"days": 11,
-"tier": "within 14 days"
 },
 {
 "date": "2026-10-30",
@@ -1123,7 +1167,7 @@
 "desc": "HomeRN Charlesto",
 "pending": false,
 "match": null,
-"days": 4,
+"days": 10,
 "tier": "within 14 days"
 },
 {
@@ -1134,7 +1178,7 @@
 "desc": "IN *LIFEWORX SOUTH CAR",
 "pending": false,
 "match": null,
-"days": 119,
+"days": 125,
 "tier": "30+ overdue"
 },
 {
@@ -1145,7 +1189,7 @@
 "desc": "IN *LIFEWORX SOUTH CAR",
 "pending": false,
 "match": null,
-"days": 88,
+"days": 94,
 "tier": "30+ overdue"
 },
 {
@@ -1156,7 +1200,7 @@
 "desc": "IN *LIFEWORX SOUTH CAR",
 "pending": false,
 "match": null,
-"days": 56,
+"days": 62,
 "tier": "30+ overdue"
 },
 {
@@ -1167,7 +1211,7 @@
 "desc": "IN *LIFEWORX SOUTH CAR",
 "pending": false,
 "match": null,
-"days": 35,
+"days": 41,
 "tier": "30+ overdue"
 },
 {
@@ -1178,8 +1222,8 @@
 "desc": "IN *LIFEWORX SOUTH CAR",
 "pending": false,
 "match": null,
-"days": 27,
-"tier": "2 wks overdue"
+"days": 33,
+"tier": "30+ overdue"
 },
 {
 "date": "2026-10-15",
@@ -1189,71 +1233,11 @@
 "desc": "IN *LIFEWORX SOUTH CAR",
 "pending": false,
 "match": null,
-"days": 19,
+"days": 25,
 "tier": "2 wks overdue"
 }
 ],
 "matched": [
-{
-"date": "2025-09-09",
-"vendor": "FirstLight Home Care",
-"src": "Synovus checking",
-"amount": 3079.99,
-"desc": "FirstLight Home",
-"pending": false,
-"match": "2025-09-26",
-"lag": 17
-},
-{
-"date": "2025-09-16",
-"vendor": "FirstLight Home Care",
-"src": "Synovus checking",
-"amount": 2623.35,
-"desc": "FirstLight Home",
-"pending": false,
-"match": "2025-10-01",
-"lag": 15
-},
-{
-"date": "2025-10-21",
-"vendor": "FirstLight Home Care",
-"src": "Synovus checking",
-"amount": 2610.54,
-"desc": "FirstLight Home",
-"pending": false,
-"match": "2025-11-05",
-"lag": 15
-},
-{
-"date": "2025-10-28",
-"vendor": "FirstLight Home Care",
-"src": "Synovus checking",
-"amount": 2239.13,
-"desc": "FirstLight Home",
-"pending": false,
-"match": "2025-11-10",
-"lag": 13
-},
-{
-"date": "2025-11-18",
-"vendor": "FirstLight Home Care",
-"src": "Synovus checking",
-"amount": 2255.26,
-"desc": "FirstLight Home",
-"pending": false,
-"match": "2025-12-04",
-"lag": 16
-},
-{
-"date": "2025-11-25",
-"vendor": "FirstLight Home Care",
-"src": "Synovus checking",
-"amount": 1752.62,
-"desc": "FirstLight Home",
-"pending": false,
-"match": "2025-12-10",
-"lag": 15
-},
 {
 "date": "2025-12-16",
 "vendor": "FirstLight Home Care",
@@ -1513,16 +1497,99 @@
 "pending": false,
 "match": "2026-11-02",
 "lag": 24
+},
+{
+"date": "2026-10-16",
+"vendor": "Home RN",
+"src": "Synovus checking",
+"amount": 175.0,
+"desc": "HomeRN Charlesto",
+"pending": false,
+"match": "2026-11-09",
+"lag": 24
+},
+{
+"date": "2026-10-23",
+"vendor": "Home RN",
+"src": "Synovus checking",
+"amount": 75.0,
+"desc": "HomeRN Charlesto",
+"pending": false,
+"match": "2026-11-09",
+"lag": 17
 }
 ],
 "ins": [
+{
+"date": "2026-11-09",
+"source": "John Hancock",
+"desc": "John Hancock Financial",
+"amount": 175.0,
+"jh": true,
+"pending": true,
+"matched": "Home RN 2026-10-16 $175.00"
+},
+{
+"date": "2026-11-09",
+"source": "John Hancock",
+"desc": "John Hancock Financial",
+"amount": 24972.36,
+"jh": true,
+"pending": true,
+"matched": null
+},
+{
+"date": "2026-11-09",
+"source": "John Hancock",
+"desc": "John Hancock Financial",
+"amount": 75.0,
+"jh": true,
+"pending": true,
+"matched": "Home RN 2026-10-23 $75.00"
+},
+{
+"date": "2026-11-09",
+"source": "John Hancock",
+"desc": "John Hancock Financial",
+"amount": 1933.26,
+"jh": true,
+"pending": true,
+"matched": null
+},
+{
+"date": "2026-11-09",
+"source": "John Hancock",
+"desc": "John Hancock Financial",
+"amount": 2014.56,
+"jh": true,
+"pending": true,
+"matched": null
+},
+{
+"date": "2026-11-06",
+"source": "John Hancock",
+"desc": "John Hancock Financial",
+"amount": 3509.65,
+"jh": true,
+"pending": false,
+"matched": null
+},
+{
+"date": "2026-11-04",
+"source": "John Hancock",
+"desc": "John Hancock Financial",
+"amount": 2120.51,
+"jh": true,
+"pending": false,
+"matched": null
+},
 {
 "date": "2026-11-02",
 "source": "John Hancock",
 "desc": "John Hancock Financial",
 "amount": 75.0,
 "jh": true,
-"pending": true,
+"pending": false,
 "matched": "Home RN 2026-10-09 $75.00"
 },
 {
@@ -2270,48 +2337,12 @@
 "pending": false
 },
 {
-"date": "2025-12-26",
-"source": "John Hancock",
-"desc": "John Hancock Financial",
-"amount": 1375.44,
-"jh": true,
-"pending": false,
-"matched": null
-},
-{
-"date": "2025-12-22",
-"source": "John Hancock",
-"desc": "John Hancock Financial",
-"amount": 2665.81,
-"jh": true,
-"pending": false,
-"matched": null
-},
-{
-"date": "2025-12-10",
-"source": "John Hancock",
-"desc": "John Hancock Financial",
-"amount": 1752.62,
-"jh": true,
-"pending": false,
-"matched": "FirstLight Home Care 2025-11-25 $1,752.62"
-},
-{
 "date": "2025-12-10",
 "source": "Social Security",
 "desc": "SSA TREAS 310",
 "amount": 2295.0,
 "jh": false,
 "pending": false
-},
-{
-"date": "2025-12-04",
-"source": "John Hancock",
-"desc": "John Hancock Financial",
-"amount": 2255.26,
-"jh": true,
-"pending": false,
-"matched": "FirstLight Home Care 2025-11-18 $2,255.26"
 },
 {
 "date": "2025-12-02",
@@ -2330,48 +2361,12 @@
 "pending": false
 },
 {
-"date": "2025-11-28",
-"source": "John Hancock",
-"desc": "John Hancock Financial",
-"amount": 381.78,
-"jh": true,
-"pending": false,
-"matched": null
-},
-{
-"date": "2025-11-21",
-"source": "John Hancock",
-"desc": "John Hancock Financial",
-"amount": 1328.84,
-"jh": true,
-"pending": false,
-"matched": null
-},
-{
 "date": "2025-11-12",
 "source": "Social Security",
 "desc": "SSA TREAS 310",
 "amount": 2295.0,
 "jh": false,
 "pending": false
-},
-{
-"date": "2025-11-10",
-"source": "John Hancock",
-"desc": "John Hancock Financial",
-"amount": 2239.13,
-"jh": true,
-"pending": false,
-"matched": "FirstLight Home Care 2025-10-28 $2,239.13"
-},
-{
-"date": "2025-11-05",
-"source": "John Hancock",
-"desc": "John Hancock Financial",
-"amount": 2610.54,
-"jh": true,
-"pending": false,
-"matched": "FirstLight Home Care 2025-10-21 $2,610.54"
 },
 {
 "date": "2025-11-03",
@@ -2390,39 +2385,12 @@
 "pending": false
 },
 {
-"date": "2025-10-31",
-"source": "John Hancock",
-"desc": "John Hancock Financial",
-"amount": 2392.49,
-"jh": true,
-"pending": false,
-"matched": null
-},
-{
-"date": "2025-10-27",
-"source": "John Hancock",
-"desc": "John Hancock Financial",
-"amount": 1728.0,
-"jh": true,
-"pending": false,
-"matched": null
-},
-{
 "date": "2025-10-22",
 "source": "Transfer",
 "desc": "TRANSFER",
 "amount": 4514.3,
 "jh": false,
 "pending": false
-},
-{
-"date": "2025-10-17",
-"source": "John Hancock",
-"desc": "John Hancock Financial",
-"amount": 1322.18,
-"jh": true,
-"pending": false,
-"matched": null
 },
 {
 "date": "2025-10-14",
@@ -2449,48 +2417,12 @@
 "pending": false
 },
 {
-"date": "2025-10-06",
-"source": "John Hancock",
-"desc": "John Hancock Financial",
-"amount": 2582.48,
-"jh": true,
-"pending": false,
-"matched": null
-},
-{
-"date": "2025-10-01",
-"source": "John Hancock",
-"desc": "John Hancock Financial",
-"amount": 2623.35,
-"jh": true,
-"pending": false,
-"matched": "FirstLight Home Care 2025-09-16 $2,623.35"
-},
-{
 "date": "2025-09-30",
 "source": "Interest",
 "desc": "INTEREST CREDIT",
 "amount": 3.25,
 "jh": false,
 "pending": false
-},
-{
-"date": "2025-09-26",
-"source": "John Hancock",
-"desc": "John Hancock Financial",
-"amount": 3079.99,
-"jh": true,
-"pending": false,
-"matched": "FirstLight Home Care 2025-09-09 $3,079.99"
-},
-{
-"date": "2025-09-22",
-"source": "John Hancock",
-"desc": "John Hancock Financial",
-"amount": 794.72,
-"jh": true,
-"pending": false,
-"matched": null
 },
 {
 "date": "2025-09-18",
@@ -2530,8 +2462,8 @@
 },
 {
 "source": "John Hancock",
-"amount": 95905.51,
-"n": 64
+"amount": 101573.22,
+"n": 56
 },
 {
 "source": "Social Security",
