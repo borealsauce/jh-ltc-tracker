@@ -25,31 +25,34 @@ section{background:#0f0f0f;border:1px solid var(--line);border-radius:14px;paddi
 <div class="wrap" id="secs"></div>
 <script>
 const $=s=>document.querySelector(s),f=n=>(n<0?'−':'')+'$'+Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2}),
-cl=n=>n<0?'neg':n>0?'pos':'',sg=n=>`<span class="${cl(n)}">${f(n)}</span>`;let D,YR='All',ch;
+cl=n=>n<0?'neg':n>0?'pos':'',sg=n=>`<span class="${cl(n)}">${f(n)}</span>`;let D,YR='All',ch;const VFIXED=['BrightStar','FirstLight Home Care','Home RN','LifeWorx'];
 const tierTag=t=>t=='30+ overdue'?'<span class="tag r">30+ overdue</span>':t=='2 wks overdue'?'<span class="tag y">2 wks overdue</span>':'<span class="tag g">within 14 days</span>';
 const inY=d=>YR=='All'||d.startsWith(YR);const S2=(a,k)=>a.reduce((s,x)=>s+x[k],0);const S=a=>a.reduce((s,x)=>s+x.amount,0);
+const planFor=ym=>ym>='2026-11'?10133:9867;
+const money0=n=>'$'+Number(n).toLocaleString('en-US');
+const planLbl=rows=>{const ps=[...new Set((rows||[]).map(b=>b.plan||planFor(b.month)))].sort((a,b)=>a-b);if(!ps.length)return '—';if(ps.length===1)return money0(ps[0])+'/mo';return money0(9867)+'/mo through Oct 2026, then '+money0(10133)+'/mo';};
 function tbl(id,cols,rows,rowcls){return `<div class="scroll"><table id="${id}"><thead><tr>${cols.map((c,i)=>`<th class="${c[2]||''}" data-i="${i}">${c[0]}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>r.sub?`<tr class="sub"><td colspan="${cols.length}">${r.sub}</td></tr>`:`<tr class="${rowcls?rowcls(r):''}">${cols.map(c=>`<td class="${c[2]||''}" data-v="${typeof c[1](r,1)=='number'?c[1](r,1):String(c[1](r,1)).replace(/"/g,'')}">${c[1](r)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
 function render(){
  const um=D.unmatched.filter(p=>inY(p.date)),mt=D.matched.filter(p=>inY(p.date)),ins=D.ins.filter(i=>inY(i.date)),jh=ins.filter(i=>i.jh),pays=um.concat(mt);
  const T=t=>um.filter(p=>p.tier==t),jhT=S(jh),care=S(pays),owed=S(um);
  const sec={};const bm=D.by_month.filter(b=>inY(b.month));const EXP=bm.reduce((s,b)=>s+b.exp,0),JHM=bm.reduce((s,b)=>s+b.jh,0),OWC=Math.max(0,EXP-JHM);const OV=bm.reduce((s,b)=>s+b.over,0);
  sec.owed=`<h2><span class="h">≡</span>STILL OWED BY JH</h2><div class="cards">
-  <div class="card big"><div class="l">Still owed by JH</div><div class="v neg">${f(OWC)}</div><div class="s">Care paid capped at $9,867/mo (${f(EXP)}) − JH received (${f(JHM)}) · ${f(owed)} in ${um.length} unmatched payments before cap</div></div>
+  <div class="card big"><div class="l">Still owed by JH</div><div class="v neg">${f(OWC)}</div><div class="s">Care paid capped at ${planLbl(bm)} (${f(EXP)}) − JH received (${f(JHM)}) · ${f(owed)} in ${um.length} unmatched payments before cap</div></div>
   <div class="card"><div class="l">Within 14 days</div><div class="v">${f(S(T('within 14 days')))}</div><div class="s">${T('within 14 days').length} payments · not overdue yet</div></div>
   <div class="card" style="border-color:var(--yel)"><div class="l">2 wks overdue (14–29d)</div><div class="v neg">${f(S(T('2 wks overdue')))}</div><div class="s">${T('2 wks overdue').length} payments</div></div>
   <div class="card" style="border-color:var(--red)"><div class="l">30+ days overdue</div><div class="v neg">${f(S(T('30+ overdue')))}</div><div class="s">${T('30+ overdue').length} payments</div></div></div>
-  <div class="cards" style="margin-top:12px">${[...new Set(um.map(p=>p.vendor))].map(v=>{const a=um.filter(p=>p.vendor==v);return `<div class="card"><div class="l">${v}</div><div class="v neg">${f(S(a))}</div><div class="s">${a.length} unpaid · <span style="color:var(--yel)">${f(S(a.filter(p=>p.tier=='2 wks overdue')))}</span> 2wk · <span class="neg">${f(S(a.filter(p=>p.tier=='30+ overdue')))}</span> 30+</div></div>`}).join('')}</div>`;
+  <div class="cards" style="margin-top:12px">${VFIXED.map(v=>{const a=um.filter(p=>p.vendor==v);return `<div class="card"><div class="l">${v}</div><div class="v neg">${f(S(a))}</div><div class="s">${a.length} unpaid · <span style="color:var(--yel)">${f(S(a.filter(p=>p.tier=='2 wks overdue')))}</span> 2wk · <span class="neg">${f(S(a.filter(p=>p.tier=='30+ overdue')))}</span> 30+</div></div>`}).join('')}</div>`;
  sec.sum=`<h2><span class="h">≡</span>SUMMARY</h2><div class="cards">
   <div class="card"><div class="l">JH received</div><div class="v pos">${f(jhT)}</div><div class="s">${jh.length} deposits</div></div>
   <div class="card"><div class="l">Care expenses</div><div class="v neg">${f(-care)}</div><div class="s">${pays.length} payments (Synovus + Citi)</div></div>
   <div class="card"><div class="l">Net gap / shortage</div><div class="v">${sg(jhT-care)}</div><div class="s">JH received − care paid</div></div>
-  <div class="card" style="border-color:var(--red)"><div class="l">Spend over plan ($9,867/mo)</div><div class="v neg">${f(-bm.reduce((s,b)=>s+b.over,0))}</div><div class="s">${bm.filter(b=>b.over>0).length} of ${bm.length} months over plan</div></div>
+  <div class="card" style="border-color:var(--red)"><div class="l">Spend over plan</div><div class="v neg">${f(-bm.reduce((s,b)=>s+b.over,0))}</div><div class="s">${planLbl(bm)} · ${bm.filter(b=>b.over>0).length} of ${bm.length} months over plan</div></div>
   <div class="card"><div class="l">Matched to JH</div><div class="v pos">${f(S(mt))}</div><div class="s">${mt.length} payments</div></div>
   <div class="card"><div class="l">JH deposits not matched</div><div class="v">${f(S(jh.filter(j=>!j.matched)))}</div><div class="s">JH paid amounts that don't equal one payment (partial / combined)</div></div></div>`;
  sec.month=`<h2><span class="h">≡</span>BY MONTH</h2><div class="chart"><canvas id="cm"></canvas></div>`+tbl('tm',[['Month',r=>r.month,'t'],['JH received',(r,v)=>v?r.jh:sg(r.jh)],['Care paid',(r,v)=>v?-r.care:sg(-r.care)],['Net',(r,v)=>v?r.net:sg(r.net)],['Over Plan',(r,v)=>v?-r.over:(r.over>0?sg(-r.over):'—')],['Expected (capped)',(r,v)=>v?r.exp:sg(r.exp)],['Gap owed',(r,v)=>v?-r.gap:sg(-r.gap)]],bm)+`<table style="margin-top:-1px"><tr style="font-weight:700"><td class="t">TOTAL</td><td>${sg(S2(bm,'jh'))}</td><td>${sg(-S2(bm,'care'))}</td><td>${sg(S2(bm,'net'))}</td><td>${sg(-OV)}</td><td>${sg(EXP)}</td><td>${sg(-(EXP-JHM))}</td></tr></table>`;
- const vs=[...new Set(pays.map(p=>p.vendor))].map(v=>{const a=pays.filter(p=>p.vendor==v),r=mt.filter(p=>p.vendor==v),o=um.filter(p=>p.vendor==v);return{v,n:a.length,paid:S(a),re:S(r),ow:S(o)}});
+ const vs=[...new Set([...VFIXED,...pays.map(p=>p.vendor)])].map(v=>{const a=pays.filter(p=>p.vendor==v),r=mt.filter(p=>p.vendor==v),o=um.filter(p=>p.vendor==v);return{v,n:a.length,paid:S(a),re:S(r),ow:S(o)}});
  sec.vendor=`<h2><span class="h">≡</span>BY VENDOR</h2>`+tbl('tv',[['Vendor',r=>r.v,'t'],['Payments',r=>r.n],['Paid',(r,v)=>v?-r.paid:sg(-r.paid)],['Gap / still owed',(r,v)=>v?-r.ow:sg(-r.ow)],['Over Plan',(r,v)=>'']],vs)+`<table style="margin-top:-1px"><tr style="font-weight:700"><td class="t">TOTAL</td><td>${pays.length}</td><td>${sg(-care)}</td><td>${sg(-owed)}</td><td>${sg(-OV)} over plan</td></tr></table>`;
- const vp=vs.slice().sort((a,b)=>b.paid-a.paid);
+ const VPAID=['FirstLight Home Care','Home RN','LifeWorx','BrightStar'];const vp=VPAID.map(name=>vs.find(x=>x.v==name)).filter(Boolean).concat(vs.filter(x=>!VPAID.includes(x.v)));
  sec.paid=`<h2><span class="h">≡</span>PAID TO CAREGIVER VENDORS</h2><div class="cards"><div class="card big"><div class="l">Total paid to care vendors</div><div class="v neg">${f(-care)}</div><div class="s">${pays.length} payments · Synovus + Citi</div></div>${vp.map(v=>`<div class="card"><div class="l">${v.v}</div><div class="v neg">${f(-v.paid)}</div><div class="s">${v.n} payments · ${care?(v.paid/care*100).toFixed(1):0}% of total</div></div>`).join('')}</div>`;
  const g=[];[...new Set(um.map(p=>p.vendor))].sort().forEach(v=>{const a=um.filter(p=>p.vendor==v).sort((x,y)=>y.date.localeCompare(x.date));g.push({sub:`${v} — ${f(S(a))} (${a.length})`},...a)});
  sec.chase=`<h2><span class="h">≡</span>UNMATCHED PAYMENTS — CHASE LIST</h2><div class="muted" style="margin-bottom:8px">JH expected within 2 weeks. Yellow = 2 wks overdue (14–29 days) · Red = 30+ days overdue. Match rule: same amount ±$0.10, JH posted 7 days before to 35 days after.</div>`+tbl('tc',[['Date',r=>r.date,'t'],['Vendor',r=>r.vendor,'t'],['Source',r=>r.src,'t'],['Amount',(r,v)=>v?-r.amount:sg(-r.amount)],['Days unpaid',r=>r.days],['Status',(r,v)=>v?r.tier:tierTag(r.tier),'t']],g,r=>r.tier=='30+ overdue'?'r':r.tier=='2 wks overdue'?'y':'');
@@ -75,20 +78,32 @@ fetch('data.json?'+Date.now()).then(r=>r.json()).then(d=>{D=d;$('#meta').textCon
   const s=$('#secs');if(s&&s.getBoundingClientRect().top>innerHeight*.45)s.scrollIntoView({behavior:'smooth',block:'start'})});render()});
 </script><script>
 let VD,VS='All';const VN=['All','Home RN','FirstLight','LifeWorx','BrightStar'];
-function vrender(){if(YR!='All'&&YR!='2026'){$('#vend').innerHTML=`<h2>VENDOR VIEW — 2026 YTD</h2><div class="muted">The vendor view only covers 2026, so it doesn't change with the year buttons. Your ${YR} numbers are in the sections below. Pick <b>2026</b> or <b>All</b> to see the vendor view again.</div>`;return}
- const s=VD.summary[VS],L=VD.payments.filter(p=>VS=='All'||p.vendor==VS),pend=!s.eob_n;
- const eob=`<div class="card"><div class="l">Paid per EOBs</div><div class="v ${s.eob?'pos':''}">${f(s.eob)}</div><div class="s">${s.eob_n?s.eob_n+' EOBs':'No EOBs on file'} · per EOBs through Aug 11, 2026 · newer EOBs need the JH portal</div></div>`;
+function vSum(VS,YR){
+ const empty={paid_n:0,paid:0,eob_n:0,eob:0,eob_last:null,un_n:0,un:0,od30_n:0,od30:0,od2_n:0,od2:0,in14_n:0,in14:0,jh_in:0,jh_posted:0,jh_pending:0,jh_n:0,jh_pending_n:0,gap_vs_paid:0,plan:null,months:0,cap:0,cap_detail:'—',eligible:0,all_paid:0};
+ const by=VD.summary_by_year||{};
+ const sy=by[YR]||(YR=='All'||YR=='2026'?VD.summary:null);
+ if(!sy)return empty;
+ return sy[VS]||(VS=='All'&&!by[YR]?sy:empty);
+}
+function vrender(){
+ const s=vSum(VS,YR);
+ const L=VD.payments.filter(p=>(YR=='All'||p.date.startsWith(YR))&&(VS=='All'||p.vendor==VS));
+ const ylbl=YR=='All'?'ALL YEARS':(YR=='2026'?'2026 YTD':YR);
+ const eobSub=s.eob_n?(s.eob_n+' EOBs · per EOBs through '+(s.eob_last||'—')+' · newer EOBs need the JH portal'):'No EOBs on file';
+ const eob=`<div class="card"><div class="l">Paid per EOBs</div><div class="v ${s.eob?'pos':''}">${f(s.eob)}</div><div class="s">${eobSub}</div></div>`;
  const tag=t=>t=='Covered by EOB'?'<span class="tag jh">Covered by EOB</span>':t=='30+ overdue'?'<span class="tag r">30+ overdue</span>':t=='2–4 wks overdue'?'<span class="tag y">2–4 wks overdue</span>':'<span class="tag g">within 14 days</span>';
  const pendNote=s.jh_pending?` · incl. ${f(s.jh_pending)} pending (${s.jh_pending_n})`:'';
  const gap=s.gap_vs_paid;
  const gapLbl=gap>=0?`Gap vs paid: ${f(gap)}`:`JH ahead of paid: ${f(-gap)}`;
- $('#vend').innerHTML=`<h2>VENDOR VIEW — ${VS.toUpperCase()} · 2026 YTD</h2><div class="cards">
- <div class="card"><div class="l">Payments made</div><div class="v neg">${f(s.paid)}</div><div class="s">${s.paid_n} payments (Synovus + Citi) · 2026 YTD</div></div>
- <div class="card big"><div class="l">JH deposits received · 2026</div><div class="v pos">${f(s.jh_in)}</div><div class="s">${s.jh_n} Synovus deposits${pendNote}<br>${gapLbl}</div></div>
- <div class="card" style="border-color:var(--gold)"><div class="l">Still eligible to be paid · 2026</div><div class="v neg">${f(s.eligible)}</div><div class="s">Paid ${f(s.all_paid)} · Cap ${f(s.cap)} (${f(s.plan)}×${s.months} mo) · JH in ${f(s.jh_in)}</div></div>
+ const capBit=s.cap_detail?` (${s.cap_detail})`:(s.plan?` (${f(s.plan)}×${s.months} mo)`:'');
+ const eobNote=s.eob_last?` (latest EOB ${s.eob_last})`:' (no EOBs on file)';
+ $('#vend').innerHTML=`<h2>VENDOR VIEW — ${VS.toUpperCase()} · ${ylbl}</h2><div class="cards">
+ <div class="card"><div class="l">Payments made</div><div class="v neg">${f(s.paid)}</div><div class="s">${s.paid_n} payments (Synovus + Citi) · ${ylbl}</div></div>
+ <div class="card big"><div class="l">JH deposits received · ${YR=='All'?'ALL YEARS':YR}</div><div class="v pos">${f(s.jh_in)}</div><div class="s">${s.jh_n} Synovus deposits${pendNote}<br>${gapLbl}</div></div>
+ <div class="card" style="border-color:var(--gold)"><div class="l">Still eligible to be paid · ${YR=='All'?'ALL YEARS':YR}</div><div class="v neg">${f(s.eligible)}</div><div class="s">Paid ${f(s.all_paid)} · Cap ${f(s.cap)}${capBit} · JH in ${f(s.jh_in)}</div></div>
  ${eob}
  <div class="card" style="border-color:var(--yel)"><div class="l">2–4 weeks</div><div class="v neg">${f(s.od2)}</div><div class="s">${s.od2_n} payments</div></div></div>
- <div class="muted" style="margin:8px 0">JH deposits &amp; eligible are portfolio totals (not per-vendor). Reimbursed column = JH EOBs only (latest EOB ${VD.eob_last}); EOB dollars applied to that vendor's oldest payments first. As of ${VD.as_of}.</div>`+
+ <div class="muted" style="margin:8px 0">JH deposits &amp; eligible are portfolio totals (not per-vendor). Reimbursed column = JH EOBs only${eobNote}; EOB dollars applied to that vendor's oldest payments first (same year). As of ${VD.as_of}.</div>`+
  tbl('tvp',[['Date',r=>r.date,'t'],['Vendor',r=>r.vendor,'t'],['Source',r=>r.src,'t'],['Amount',(r,v)=>v?-r.amount:sg(-r.amount)],['Covered by EOB',(r,v)=>v?r.eob_cov:f(r.eob_cov)],['Still unpaid',(r,v)=>v?-r.open:sg(-r.open)],['Days',r=>r.days],['Status',(r,v)=>v?r.status:tag(r.status),'t']],L,r=>r.status=='30+ overdue'?'r':r.status=='2–4 wks overdue'?'y':'');rz()}
 fetch('vendors.json?'+Date.now()).then(r=>r.json()).then(d=>{VD=d;$('#vpills').innerHTML='<span class="plbl">Vendor</span>'+VN.map(v=>`<button class="pill ${v==VS?'on':''}" data-v="${v}">${v}</button>`).join('');
  document.querySelectorAll('#vpills .pill').forEach(p=>p.onclick=()=>{VS=p.dataset.v;document.querySelectorAll('#vpills .pill').forEach(x=>x.classList.toggle('on',x==p));vrender()});vrender()});
